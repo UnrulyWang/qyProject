@@ -1,0 +1,559 @@
+#mainTop .bx .mainTop {
+    height: 54px;
+    line-height: 54px;
+    color: #636363;
+    font-size: 14px;
+}
+
+#mainTop .bx .mainSearch {
+    position: relative;
+}
+
+#mainTop .bx .mainSearch img {
+    width: 960px;
+    height: 72px;
+}
+
+#mainTop .bx .mainSearch .search {
+    position: absolute;
+    width: 225px;
+    height: 30px;
+    top: 21px;
+    right: 38px;
+    color: #636363;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding-left: 44px;
+    outline: none;
+    background: white url("images/ic_search_g.png") no-repeat 15px 10px;
+    background-size: 5%;
+}
+
+#mainTop .bx .mainSearch .close {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 22px;
+    right: 38px;
+    padding: 12px 10px 12px 10px;
+}
+
+/*轮播图区域*/
+/*轮播图左侧**/
+#mainFixPr {
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+#mainFixPr .bx {
+    position: relative;
+}
+
+#mainFixPr .bx .prLeft {
+    width: 200px;
+}
+
+#mainFixPr .bx .prLeft .bigUl {
+    position: relative;
+}
+
+#mainFixPr .bx .prLeft li {
+    height: 32px;
+    line-height: 32px;
+    color: #737373;
+    margin-bottom: 1px;
+    border-right: 1px solid white;
+
+}
+
+#mainFixPr .bx .prLeft li .name {
+    background-color: #f6f6f6;
+}
+
+#mainFixPr .bx .prLeft .localName {
+    padding-left: 20px;
+}
+
+#mainFixPr .bx .prLeft .number {
+    display: inline-block;
+    float: right;
+    width: 37px;
+    height: 22px;
+    color: white;
+    background-color: #cecece;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 8px;
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+/*二维码部分*/
+#mainFixPr .bx .prLeft .ewmApp {
+    height: 170px;
+    background-color: #f6f6f6;
+}
+
+#mainFixPr .bx .prLeft .app {
+    height: 43px;
+    line-height: 43px;
+    padding-left: 25px;
+
+}
+
+#mainFixPr .bx .prLeft .app img {
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+}
+
+#mainFixPr .bx .prLeft .app a {
+    color: #737373;
+}
+
+#mainFixPr .bx .prLeft .ewm {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+#mainFixPr .bx .prLeft .ewm img {
+    width: 114px;
+    height: 114px;
+}
+
+/*左侧隐藏框*/
+/*外面的哪的大的div  */
+#mainFixPr .bx .prLeft .hideBlock {
+    position: absolute;
+    width: 700px;
+    height: 320px;
+    padding: 20px 0;
+    left: 199px;
+    top: 0px;
+    /*border: 1px solid red;*/
+    z-index: 5;
+    overflow: hidden;
+    display: none;
+}
+
+#mainFixPr .bx .prLeft .hideBlock li {
+    float: left;
+    width: 174px;
+    display: inline;
+    height: 335px;
+    background-color: #f6f6f6;
+    border-right: 1px dashed white;
+}
+
+/*里面的 那个div*/
+#mainFixPr .bx .prLeft .hideBlock div {
+    width: 5000px;
+    height: 335px;
+    /*border: 1px solid green;*/
+    position: absolute;
+    /*left: -20px;*/
+
+}
+
+#mainFixPr .bx .prLeft .hideBlock div dt {
+    height: 18px;
+    font-size: 14px;
+    color: #999;
+    line-height: 18px;
+    padding-left: 20px;
+}
+
+#mainFixPr .bx .prLeft .hideBlock div dd {
+    height: 24px;
+    line-height: 24px;
+}
+
+#mainFixPr .bx .prLeft .hideBlock div a {
+    font-size: 12px;
+    color: #0073b6;
+    width: 140px;
+    display: inline-block;
+    padding-left: 34px;
+}
+
+#mainFixPr .bx .prLeft .hideBlock span {
+    font: bold 20px/30px 楷体;
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    background-color: #737373;
+    z-index: 5;
+    position: absolute;
+    cursor: pointer;
+}
+
+#mainFixPr .bx .prLeft .hideBlock .spanL {
+    background-color: #cecece;
+    bottom: 15px;
+    left: 600px;
+}
+
+#mainFixPr .bx .prLeft .hideBlock .spanR {
+    bottom: 15px;
+    left: 640px;
+}
+
+#mainFixPr .bx .prLeft .hideBlock div a:hover {
+    background-color: #cecece;
+}
+
+/*右侧 轮播图      +++++++++++++++++++++++ */
+#mainFixPr .bx .prRight {
+    position: absolute;
+    width: 750px;
+    height: 500px;
+    /*border: 1px solid red;*/
+    overflow: hidden;
+    top: 0;
+    right: 0;
+}
+
+/*小div*/
+#mainFixPr .bx .prRight .smallJpg {
+    position: absolute;
+    width: 4500px;
+    /*border: 1px solid green;*/
+}
+
+#mainFixPr .bx .prRight .smallJpg span {
+    float: left;
+}
+
+#mainFixPr .bx .prRight .smallJpg span img {
+    width: 750px;
+    height: 500px;
+}
+
+/*轮播图下的小按钮*/
+#mainFixPr .bx .prRight .radius {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#mainFixPr .bx .prRight .radius li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #decfd1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/*编辑推荐 start*/
+#edit .bx p {
+    height: 32px;
+    line-height: 32px;
+    color: #636363;
+}
+
+/*推荐*/
+#edit .bx .rmd {
+    height: 236px;
+    width: 960px;
+    background-color: #f6f6f6;
+    margin-bottom: 30px;
+}
+
+#edit .bx .rmd {
+    padding-top: 15px;
+}
+
+/*推荐里的li*/
+#edit .bx .rmd li {
+    float: left;
+    height: 236px;
+    padding: 0 24px;
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+#edit .bx .rmd li + li {
+    border-left: 1px dashed #cccccc;
+}
+
+#edit .bx .rmd li span {
+    border: 1px solid #cccccc;
+    text-align: center;
+    line-height: 156px;
+    width: 108px;
+    height: 156px;
+    display: inline-block;
+}
+
+#edit .bx .rmd li span img {
+    width: 100px;
+    height: 150px;
+}
+
+/*包含a的div*/
+#edit .bx .rmd li .aN {
+    height: 35px;
+    line-height: 35px;
+}
+
+#edit .bx .rmd li .aN a {
+    color: #0073b6;
+    padding: 0;
+}
+
+/*包含input的div*/
+#edit .bx .rmd li .iN:hover {
+    background-color: white;
+    opacity: 0.8;
+}
+
+/*按钮*/
+#edit .bx .rmd li .iN .btn {
+    background-color: #1995dd;
+    color: #fff;
+    width: 108px;
+    height: 24px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*提示字*/
+#edit .bx .rmd li i {
+    position: absolute;
+    bottom: 25px;
+    font-size: 10px;
+    font-style: normal;
+    background-color: #f6f6f6;
+    padding: 2px;
+    color: #635b48;
+    display: none;
+    z-index: 5;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++编辑推荐  end*/
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++全部加载start*/
+/*左侧p标题*/
+#allRmd .bx p {
+    color: #636363;
+    margin-bottom: 16px;
+}
+
+#allRmd .bx .left {
+    display: inline-block;
+}
+
+#allRmd .bx .left li {
+    color: #636363;
+    line-height: 30px;
+    height: 30px;
+    font-size: 12px;
+    word-spacing: 3px;
+}
+
+/*左侧的图片*/
+#allRmd .bx .left li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+#allRmd .bx .left li a {
+    color: #0073b6;
+}
+
+/*右侧 图片栏*/
+#allRmd .bx .right {
+    width: 670px;
+    float: right;
+}
+
+#allRmd .bx .right .select a {
+    color: #0073b6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*span之间的竖线*/
+#allRmd .bx .right .select .fg {
+    padding: 0 10px;
+    font-style: normal;
+}
+
+/*图片部分+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#allRmd .bx .right .pictureR {
+
+}
+
+#allRmd .bx .right .pictureR ul li .top {
+    width: 106px;
+    height: 156px;
+    border: 1px solid #cccccc;
+    margin-bottom: 14px;
+}
+
+#allRmd .bx .right .pictureR ul {
+    height: 240px;
+    margin-top: 20px;
+    border-bottom: 1px dashed #cccccc;
+}
+
+#allRmd .bx .right .pictureR ul li {
+    float: left;
+    font-size: 12px;
+    height: 240px;
+    position: relative;
+}
+
+#allRmd .bx .right .pictureR ul li + li {
+    margin-left: 32px;
+}
+
+#allRmd .bx .right .pictureR ul li img {
+    width: 100px;
+    height: 150px;
+}
+
+#allRmd .bx .right .pictureR ul li .top a {
+    width: 100px;
+    margin: 3px;
+    height: 150px;
+    display: block;
+}
+
+#allRmd .bx .right .pictureR ul li .top a .cls {
+    display: none;
+}
+
+#allRmd .bx .right .pictureR ul li .top .zd {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+}
+
+#allRmd .bx .right .pictureR ul li .top .zd:hover {
+    background-color: #000;
+    opacity: 0.3;
+}
+
+/*图片下的span*/
+#allRmd .bx .right .pictureR ul li .bottom span {
+    display: block;
+}
+
+#allRmd .bx .right .pictureR ul li .bottom span a {
+    color: #0073b6;
+    font-weight: bold;
+}
+#allRmd .bx .right .pictureR ul li .bottom span a:hover {
+    text-decoration: underline;
+}
+#allRmd .bx .right .pictureR ul li .bottom .remind {
+    position: absolute;
+    bottom: 20px;
+    padding: 2px;
+    background-color: #f6f6f6;
+    display: none;
+    z-index: 5;
+    color: #635b48;
+    border: 1px solid #cccccc;
+}
+
+/* 全部加载最下面*/
+#allRmd .bx .mainBottom {
+    padding-top: 98px;
+    font-size: 12px;
+}
+
+/*//替换*/
+#replace {
+    display: none;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++全部加载   end*/
+
+#floor {
+    border-top: 3px solid #25a851;
+    background-color: #323232;
+    height: 200px;
+}
+#floor .top {
+    margin-left: 76px;
+    margin-top: 37px;
+}
+#floor .top li {
+    float: left;
+    height: 19px;
+    line-height: 19px;
+    border-left:1px solid #636363;
+    padding-left: 12px;
+    padding-right: 8px;
+}
+#floor .top li.one {
+    padding-left: 14px;
+    padding-right: 8px;
+    border-left:2px solid #25a851;
+}
+#floor .top li a {
+    color:#c0b798;
+    font-size: 12px;
+}
+#floor .top li a:hover {
+    text-decoration: underline;
+}
+#floor .main {
+    margin-top: 22px;
+    color: #635b48;
+    margin-left: 90px;
+    font-size: 10px;
+}
+#floor .bottom dt {
+    float: left;
+    color: #635b48;
+    margin-right: 12px;
+}
+#floor .bottom {
+    margin-top: 26px;
+    margin-left: 90px;
+    font-size: 10px;
+}
+#floor .bottom dd {
+    float: left;
+    padding-right: 6px;
+}
+#floor .bottom dd+dd {
+    padding-left: 6px;
+    border-left: 1px solid #635b48;
+}
+#floor .bottom dd a {
+    color: #635b48;
+}
+#floor .bottom dd a:hover {
+    text-decoration: underline;
+    color: #c0b798;
+}
+
+
+/*//返回顶部*/
+#returnTop {
+    width:60px;
+    height: 60px;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: none;
+    border: 1px solid #c0c0c0;
+}
+#returnTop:hover {
+    /*background-color: black;*/
+    opacity: 0.6;
+}

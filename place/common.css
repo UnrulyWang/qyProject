@@ -1,0 +1,91 @@
+* {
+    margin:0px;
+    padding:0px;
+
+}
+
+
+/*清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+}
+
+
+
+
+/*左右浮动*/
+.fr {
+    float: right
+}
+
+.fl {
+    float: left
+}
+
+/*a标签样式*/
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+i {
+    font-style: normal;
+}
+
+/*input样式*/
+input {
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
+/*版心*/
+body{
+    min-width:1349px;
+    max-width: 1400px;
+    margin:0 auto;
+}
+input {
+    border: none;
+    /* 去掉高亮显示的边框 */
+    outline: none;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #323232;
+}
+
+
+.clearfloat:after {
+    /* 必写的三个样式 */
+    content:"";
+    clear:both;
+    display:block;
+    /* 低配版本以防万一 但是都是要写 */
+    height:0;
+    line-height:0;
+    /* 可见性 把东西隐藏但是位置留下 */
+    visibility:hidden;
+}
+
+
+
+/* 低版本ie浏览兼容问题解决方法 */
+.clearfloat {
+    zoom: 1;
+}
+/* --------样式的初始化 end  --------- */

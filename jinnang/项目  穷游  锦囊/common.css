@@ -1,0 +1,284 @@
+/*顶部导航*/
+#dh {
+    background-color: #323232;
+    height: 30px;
+    position: relative;
+}
+#dh .leftList {
+    list-style-type: none;
+    width: 700px;
+}
+#dh .leftList li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 30px;
+}
+/*网站logo*/
+#dh .leftList li .logoA{
+    font-size: 0px;
+}
+#dh .leftList li a .logo {
+    /*position: absolute;*/
+    width: 58px;
+    height: 18px;
+    margin-bottom: 25px;
+}
+#dh .leftList li a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #c0c0c0;
+}
+#dh .leftList li .gif {
+    height: 19px;
+    width: 44px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+}
+/*箭头 下*/
+#dh .leftList li a .jianTouXia {
+    font: 400 15px/15px simsun;
+    width: 15px;
+    height: 7px;
+    display: inline-block;
+    overflow: hidden;
+}
+#dh .leftList li a .jianTouXia span {
+    position: relative;
+    top: -7px;
+}
+/*+++++++++++++++++++++++++++++++++++下拉框*/
+#dh .leftList .down{
+    position: relative;
+}
+#dh .leftList li .dropDown {
+    width: 185px;
+    height: 176px;
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    background-color: #fff;
+    border:1px solid #f6f6f6;
+    display: none;
+    /*overflow: hidden;*/
+    z-index: 5;
+}
+#dh .leftList li .dropDown p {
+    height: 30px;
+    padding:1px 0;
+    width: 185px;
+}
+#dh .leftList li .dropDown .bgt1 {
+    position: relative;
+    margin-top:9px;
+}
+#dh .leftList li .dropDown .bgt1 a {
+    width: 145px;
+    height: 30px;
+    display: inline-block; 
+}
+#dh .leftList li .dropDown .bgt1 strong{
+    color: #636363;
+}
+#dh .leftList li .dropDown p a{
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 40px;
+    color: #636363;
+}
+#dh .leftList li .dropDown span {
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    left: 10px;
+    top: -6px;
+    background: url("images/head_user_trigon.png") no-repeat;
+}
+
+/* //隐藏的侧框 左侧*/
+#dh .hideDv {
+    width: 610px;
+    height: 355px;
+    display: none;
+    padding-left: 6px;
+    /*background-color: red;*/
+    /*border: 1px solid #f6f6f6;*/
+    position: absolute;
+    top: 30px;
+    left: 510px;
+    z-index: 5;
+    overflow: hidden;
+
+}
+#dh .hideDv dl {
+    width:610px;
+
+}
+#dh .hideDv .topDvHead {
+    height: 50px;
+    line-height: 50px;
+    padding:0 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+}
+#dh .hideDv .topDvHead .left {
+    font-size: 16px;
+}
+#dh .hideDv .topDvHead .right {
+    font-size: 14px;
+    float: right;
+    color: #323232;
+}
+#dh .hideDv a {
+    color: #323232;
+}
+#dh .hideDv .topDvHead .right a:hover {
+    color: green;
+}
+
+
+/* 右侧下拉框 */
+#dh .down .dropDownRight {
+    width: 105px;
+    border: 1px solid #f6f6f6;
+    position: absolute;
+    top: 30px;
+    display: none;
+    background: white;
+    z-index: 5;
+}
+#dh .down .dropDownRight p {
+    width: 105px;
+}
+#dh .down .dropDownRight span {
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    left: 10px;
+    top: -6px;
+    background: url("images/head_user_trigon.png") no-repeat;
+}
+#dh .down .dropDownRight a {
+    padding:0 20px;
+    font-size: 16px;
+    font-weight: 200;
+    color: #636363;
+}
+/* 隐藏列表下面部分 */
+#dh .hideDv dl {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fff;
+}
+#dh .hideDv dl+dl {
+    border-top:1px dashed #ededed;
+}
+#dh .hideDv .listOne dt {
+    float: left;
+    padding-right: 20px;
+    line-height: 40px;  
+}
+#dh .hideDv dt{
+    font-size: 16px;
+    float:left;
+}
+#dh .hideDv dd{
+    margin-top: 12px;
+    float: left;
+}
+#dh .hideDv dd a {
+    margin-left: 15px;
+    padding-top: 7px;
+    font-size: 14px;
+}
+#dh .hideDv dd a:hover {
+    background-color: skyblue;
+}
+
+/* 第二行 */
+#dh .hideDv .listTwo dt {
+    padding-top: 14px;
+    padding-right: 20px;
+    height: 56px
+}
+/* 第三行 */
+#dh .hideDv .listThree dt {
+    padding-top: 14px;
+    padding-right: 20px;
+    height: 56px
+}
+/* 第四行 */
+#dh .hideDv .listFour dt {
+    float: left;
+    padding-right: 20px;
+    line-height: 40px;  
+}
+#dh .hideDv .listFive dt {
+    float: left;
+    padding-right: 20px;
+    line-height: 40px;  
+}
+#dh .hideDv .listSix dt {
+    float: left;
+    padding-right: 20px;
+    line-height: 40px;  
+}
+
+/*//右侧登录*/
+#dh .rightList {
+    width: 459px;
+    /*border: 1px solid red;*/
+    height: 30px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+}
+#dh .rightList li {
+    float: left;
+    height: 30px;
+    /*margin-top: 5px;*/
+    line-height: 30px;
+    margin-right:14px;
+}
+#dh .rightList li a {
+    color: #c0c0c0;
+}
+/*#dh .rightList li a:hover {*/
+    /*color:green;*/
+/*}*/
+/*搜索*/
+#dh .rightList .search {
+    width: 200px;
+    /*background:url("images/ic_search_g.png") no-repeat 175px 9px;*/
+    /*background-size: 7%;*/
+}
+#dh .rightList .search input {
+    width: 20px;
+    height: 20px;
+    background: url("images/ic_search_g.png") no-repeat right center;
+    background-size: 9%;
+    border-radius: 5px;
+    /*display: none;*/
+    border: none;
+    position: absolute;
+    top: 5px;
+    padding-left: 10px;
+    right: 260px;
+}
+#dh .rightList .search img {
+    margin-top: 5px;
+    float: right;
+}
+#dh .rightList .qq {
+    padding-left: 25px;
+    height: 18px;
+    width: 23px;
+    margin-top: 6px;
+    border-left: 1px solid #c0c0c0;
+}
+#dh .rightList .qq img {
+   margin-bottom: 14px;
+}
+#dh .rightList .dl {
+    margin-right: 31px;
+}

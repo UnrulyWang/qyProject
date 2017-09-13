@@ -1,0 +1,2727 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="common.css"/>
+    <link rel="stylesheet" href="css/nav-header.css"/>
+    <link rel="stylesheet" href="css/1.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .pic {
+        width: 170px;
+        height: 230px;
+        margin: 150px auto 0;
+        position: relative;
+        /*transform 旋转元素*/
+        transform-style: preserve-3d;
+        transform: perspective(800px) rotateX(-10deg) rotateY(0deg);
+    }
+
+    /*body{background-color: #66677c;overflow:hidden;}*/
+
+    .pic img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #fff;
+        /*倒影的设置*/
+        -webkit-box-reflect: below 10px -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5) 100%);
+    }
+
+    .pic p {
+        width: 1200px;
+        height: 1200px;
+        background: -webkit-radial-gradient(center center, 600px 600px, rgba(255, 255, 255, .5), rgba(0, 0, 0, 0));
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-top: -600px;
+        margin-left: -600px;
+        border-radius: 600px;
+        transform: rotateX(90deg);
+    }
+</style>
+<body>
+<div class="q-layer-header">
+    <div class="header-inner fl">
+        <a href="../index/index.html"><img class="logo" src="image/logo_116x36.png" alt="logo" title="穷游网"></a>
+    </div>
+    <div class="nav fl">
+        <ul class="nav-ul fl">
+            <li><a href="#" title="穷游目的地" class="green">目的地</a></li>
+            <li><a href="../jinnang/项目%20%20穷游%20%20锦囊/jinNang.html" title="穷游锦囊">锦囊</a></li>
+            <li><a href="#" title="穷游行程助手">行程助手</a></li>
+            <li id='down'>
+                <a href="../community/community.html" title="穷游论坛">社区
+                    <i><span>◇</span></i>
+                    <div class="lay-nav">
+                        <ul id="nav-down">
+                            <li class='first'><a href="#"></a></li>
+                            <li id='nav-down2'>
+                                <a href="#">旅行论坛<span>&nbsp;&gt;</span></a>
+                                <div>
+                                    <div>
+                                        <div class="top">
+                                            <i class="fl">热门版块</i>
+                                            <span class="fr"><a href="#">全部版块&nbsp;&gt;</a></span>
+                                        </div>
+                                        <dl class="clearfix">
+                                            <dt class="fl">兴趣小组</dt>
+                                            <dd class="fl">
+                                                <a href="#">结伴同游</a>
+                                                <a href="#">签证</a>
+                                                <a href="#">旅行摄影</a>
+                                                <a href="#">潜水俱乐部</a>
+                                                <a href="#">带孩子旅行</a>
+                                                <a href="#">明信片</a>
+                                                <!--<a href="#">旅行购物</a>-->
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class="fl">穷游欧洲</dt>
+                                            <dd class="fl">
+                                                <a href="#">法国/摩纳哥</a>
+                                                <a href="#">德国</a>
+                                                <a href="#">英国/爱尔兰</a>
+                                                <a href="#">瑞士/列支敦士登</a>
+                                                <a href="#">土耳其</a><br/>
+                                                <a href="#">挪威/瑞典/芬兰/丹麦/冰岛</a>
+                                                <a href="#">意大利/梵蒂冈/圣马力诺/马耳他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游亚洲</dt>
+                                            <dd class="fl">
+                                                <a href="#">台湾</a>
+                                                <a href="#">日本</a>
+                                                <a href="#">泰国</a>
+                                                <a href="#">新加坡</a>
+                                                <a href="#">斯里兰卡</a>
+                                                <a href="#">香港/澳门</a>
+                                                <a href="#">马来西亚/文莱</a><br/>
+                                                <a href="#">柬埔寨</a>
+                                                <a href="#">马尔代夫</a>
+                                                <a href="#">缅甸</a>
+                                                <a href="#">伊朗</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游美洲</dt>
+                                            <dd class='fl'>
+                                                <a href="#">加拿大</a>
+                                                <a href="#">美国</a>
+                                                <a href="#">中美</a>
+                                                <a href="#">南美/南极</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游大洋洲</dt>
+                                            <dd class='fl'>
+                                                <a href="#">澳大利亚</a>
+                                                <a href="#">新西兰</a>
+                                                <a href="#">太平洋海岛</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游非洲</dt>
+                                            <dd class='fl'>
+                                                <a href="#">东非地区</a>
+                                                <a href="#">非洲海岛</a>
+                                                <a href="#">北非地区</a>
+                                                <a href="#">非洲其他国家</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">旅行问答</a></li>
+                            <li><a href="#">JNE旅行生活美学</a></li>
+                            <li><a href="#">特别策划</a></li>
+                            <li><a href="#">负责任的旅行</a></li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li><a href="../mall/mall.html" title="商城">商城</a></li>
+            <li><a href="#" title="机票">机票</a></li>
+            <li><a href="#" title="酒店">酒店</a></li>
+            <li id="navDownLast">
+                <a href="#">预订
+                    <i><span>◇</span></i>
+                </a>
+                <ul>
+                    <li><a href="#">特价酒店</a></li>
+                    <li><a href="#">爱彼迎</a></li>
+                    <li><a href="#">保险</a></li>
+                    <li><a href="#">华人旅馆</a></li>
+                    <li><a href="#">邮轮</a></li>
+                    <li><a href="#">租车</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="fun fr">
+        <div class="search fl">
+            <input class="fl" type="text"/>
+            <i id="search"><img src="image/search.bmp" width="20px" height="21px" alt=""></i>
+        </div>
+        <div class="fr">
+            <div>
+                <a href="#"><img src="image/qq.bmp" alt=""></a>
+                <a href="#"><img src="image/wb.bmp" width="20px" height="20px" alt=""></a>
+                <a href="#"><img src="image/wchat.bmp" alt=""></a>
+            </div>
+            <a href="#">注册</a>
+            <a href="#">登录</a>
+        </div>
+    </div>
+</div>
+<!--中间大图-->
+<div id="big">
+    <p class="text">你好！世界</p>
+
+    <div class="sousuo">
+        <div id="srk">
+            <input type="text" id="txt" placeholder="搜索国家、城市、目的地"/>
+        </div>
+        <p class="city">
+            热门城市：
+            <a href="">香港</a>
+            <a href="">曼谷</a>
+            <a href="">澳门</a>
+            <a href="">东京</a>
+            <a href="">巴黎</a>
+        </p>
+
+        <p class="city"><a href="">查看全部国家列表>>></a></p>
+    </div>
+    <div class="box">
+        <div id="box">
+            <p id="p1"></p>
+
+            <p id="p2">
+                拍摄于：
+                <a href="">迪拜</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="pic">
+    <img src="picture\u1pic1.jpg"/>
+    <img src="picture\u1pic2.jpg"/>
+    <img src="picture\u1pic3.jpg"/>
+    <img src="picture\u1pic4.jpg"/>
+    <img src="picture\u1pic5.jpg"/>
+    <img src="picture\u1pic6.jpg"/>
+    <img src="picture\u1pic7.jpg"/>
+    <img src="picture\u1pic8.jpg"/>
+    <img src="picture\u1pic9.jpg"/>
+    <img src="picture\u1pic10.jpg"/>
+    <p></p>
+</div>
+
+<script src="jquery-1.12.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+
+        var imgL = $(".pic img").size();
+        var deg = 360 / imgL;
+        var roY = 0, roX = -10;
+        var xN = 0, yN = 0;
+        var play = null;
+        $(".pic").css("position", "relative").css("top", "-100px");
+
+        $(".pic img").each(function (i) {
+            $(this).css({
+                <!--translateZ 定义2d旋转沿着z轴-->
+                "transform": "rotateY(" + i * deg + "deg) translateZ(300px)"
+            });
+            <!--防止图片被拖拽-->
+            $(this).attr('ondragstart', 'return false');
+        });
+
+        $(document).mousedown(function (ev) {
+            var x_ = ev.clientX;
+            var y_ = ev.clientY;
+            clearInterval(play);
+//            console.log('我按下了');
+            $(this).bind('mousemove', function (ev) {
+                /*获取当前鼠标的坐标*/
+                var x = ev.clientX;
+                var y = ev.clientY;
+                /*两次坐标之间的距离*/
+                xN = x - x_;
+                yN = y - y_;
+
+                roY += xN * 0.2;
+                roX -= yN * 0.1;
+//                console.log('移动');
+                //$('body').append('<div style="width:5px;height:5px;position:absolute;top:'+y+'px;left:'+x+'px;background-color:red"></div>');
+
+                $('.pic').css({
+                    transform: 'perspective(800px) rotateX(' + roX + 'deg) rotateY(' + roY + 'deg)'
+                });
+                /*之前的鼠标坐标*/
+                x_ = ev.clientX;
+                y_ = ev.clientY;
+
+            });
+        }).mouseup(function () {
+            $(this).unbind('mousemove');
+            var play = setInterval(function () {
+
+                xN *= 0.95;
+                yN *= 0.95
+                if (Math.abs(xN) < 1 && Math.abs(yN) < 1) {
+                    clearInterval(play);
+                }
+                roY += xN * 0.2;
+                roX -= yN * 0.1;
+                $('.pic').css({
+                    transform: 'perspective(800px) rotateX(' + roX + 'deg) rotateY(' + roY + 'deg)'
+                });
+
+            }, 30);
+
+        });
+
+    });
+</script>
+<!--探索区域-->
+<div id="explore">
+    <div id="ex-nav">
+        <h2>探索精彩世界</h2>
+        <ul id="uu" class="clearfloat">
+            <li><a href="javascript:void(0)" class="nowrent">24小时游迪拜</a></li>
+            <li><a href="javascript:void(0)">俯翰城市</a></li>
+            <li><a href="javascript:void(0)">神秘遗址</a></li>
+            <li><a href="javascript:void(0)">玩转日本</a></li>
+            <li><a href="javascript:void(0)">最爱小镇</a></li>
+            <li><a href="javascript:void(0)">跳蚤市场</a></li>
+            <li><a href="javascript:void(0)">魅力夜色</a></li>
+            <li><a href="javascript:void(0)">怀旧时光</a></li>
+        </ul>
+    </div>
+    <div class="worldPicture">
+        <ul class="picList" id="worldPic0">
+            <li class="pic1" id="pp1">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>爱购物的来迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">爱购物的来迪拜</em>
+                            <span class="mask-text">逛街的方式千篇一律，更有趣的地方在这里！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>看迪拜历史文化</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">看迪拜历史文化</em>
+                            <span class="mask-text">迪拜是全球航旅的重要中转站之一，每天都会迎来送往世界各地的旅客。中转的时候顺便再走进这座传奇都市中，畅享一段乐趣无限的转机停留。来看看的24小时中途停留不可错过的文化景点吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>城市风光</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">城市风光</em>
+                            <span class="mask-text">若选乘阿联酋航空在迪拜转机，预订航班后，可立刻联系当地的阿联酋航空办事处或办理机票预订的旅行社，来加一份中途停留套餐——从机场接待到酒店24小时入住和旅游观光，皆可一一涵盖。来看看一众好评的24小时中途停留的城市必玩项目吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>中转怎么玩</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">中转怎么玩</em>
+                            <span class="mask-text">如果您已抵达迪拜，想在前往下一个目的地前游览迪拜，那么您也可以购买“抵达后中途停留”套餐。届时，请到迪拜国际机场办理入境手续前的到达大厅内的“迪拜酒店和签证”柜台了解购买方案。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>浪漫攻略</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">浪漫攻略</em>
+                            <span class="mask-text">从清晨到日暮，和你的Ta携手畅游迪拜的日与夜。从4个地方，发现迪拜独一无二的惊艳美景，更能收获浪漫体验。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>打卡地铁沿线目标</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">打卡地铁沿线目标</em>
+                            <span class="mask-text">方便快捷的迪拜地铁，载着人们游览这座城市的景观。一路经过知名地标；绿线围绕老城区行进，让你沉浸幽静好时光。今天我们先乘坐红线出发，赏尽繁华迪拜。前方地标云集，敬请观赏。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>免费景点</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">免费景点</em>
+                            <span class="mask-text">许多小伙伴已经体验到了来迪拜免费落地签的便利，其实来迪拜旅行还有更多暖心之处。比如今天我们为你推荐了10个免费景点，游览无门槛，好逛又好看的10个景点已经吸粉无数。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>主题乐园</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">主题乐园</em>
+                            <span class="mask-text">提起迪拜主题乐园，你最先想到的是哪里？是能和好莱坞“明星”一起游玩的Motiongate主题乐园、一步穿越到印度宝莱坞主题乐园、让小孩子和大朋友都向往的乐高主题乐园、还是惊险刺激的IMG冒险世界呢？</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>酒店体验</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">酒店体验</em>
+                            <span class="mask-text">迪拜免费落地签给人们的旅行带来便利，来迪拜转机停留数日的人越来越多。看风景之余，好好放松也是一件要事。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u1pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>亲子游迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">亲子游迪拜</em>
+                            <span class="mask-text">一个时尚繁华的迪拜，一个古老宁静的迪拜，一个缤纷欢乐的迪拜，迪拜中转停留三日游，和家人一起，认识真实的迪拜。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic1">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>洛克菲勒观景台</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">洛克菲勒观景台</em>
+                            <span class="mask-text">这里是欣赏曼哈顿天际线的绝佳位置，观景台一共有三层，不仅可以将帝国大厦、新世贸中心大楼等摩天大楼尽收眼底，向北可鸟瞰中央公园，甚至可以看到自由女神像的绰约风姿。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>函馆山</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">函馆山</em>
+                            <span class="mask-text">函馆的夜景，世界三大夜景之一，号称米其林三星级的夜景，是来到函馆不得不看的城市景观。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>六本木新城/span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">六本木新城</em>
+                            <span class="mask-text">六本木Hills是观赏东京全景最好的地方之一，可以很清晰的拍到带有东京塔的完美城市全景。整个大厦内餐饮、购物、娱乐一应俱全，不定期举办的特色展览也很值得观看。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>太平山</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">太平山</em>
+                            <span class="mask-text">太平山是香港岛最高山峰，也是俯瞰香港的必到处，太平山顶可饱览维多利亚港全貌和薄扶林水塘的自然美景。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>凯瑞公园</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">凯瑞公园</em>
+                            <span class="mask-text">凯瑞公园是拍摄西雅图景色的最佳地点，从该角度拍照无论是西雅图市区、太空针、艾略特湾，还是远处的雷尼尔山，都一览无遗。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>蒙帕纳思大楼</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">蒙帕纳思大楼</em>
+                            <span class="mask-text">这里是巴黎最高和最中心点，面朝埃菲尔铁塔，巴黎的大道、屋顶、建筑物、公园等等整个巴黎在你脚下！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>米开朗基罗广场</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">米开朗基罗广场</em>
+                            <span class="mask-text">米开朗基罗广场位于佛罗伦萨市区南端的高地上，广场雄据半山腰，坐视整个佛罗伦萨城及远处起伏不断的丘陵，气势非凡，风光无限。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>碎片大厦</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">碎片大厦</em>
+                            <span class="mask-text">天气晴朗的日子里，在碎片大厦观景台可以将伦敦市景一收眼底，伦敦眼、大本钟、泰晤士河……只描摹出城市轮廓的夕阳景色更是出众。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>象山</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">象山</em>
+                            <span class="mask-text">山不高，但前无屏障，台北盆地一览无遗，不仅是登高眺望的好据点，也是拍摄101高楼的绝佳地点。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u2pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>梅田空中庭院展望台</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">梅田空中庭院展望台</em>
+                            <span class="mask-text">大阪车站北部的梅田天空大厦顶部由环形的空中庭院展望台所连接，是日本少数的360度开放式屋顶展望台。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic2">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>马丘比丘古城</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">马丘比丘古城</em>
+                            <span class="mask-text">秘鲁的马丘比丘古城是已知保存最好的遗迹，它也是世界各地旅行者所关注的焦点。它曾一度被人们所遗忘，1911年被一位名为海勒姆-宾汉姆的考古学家再次发现。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>石球遗址</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">石球遗址</em>
+                            <span class="mask-text">据考查，这些谜一样的石球，差不多都是用坚固美观的花岗岩制成。令科学家和考古工作者迷惑不解的是，这些石球所在地的附近并没有花岗岩石料，在其他地方也找不到任何原始制作者留下的痕迹。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>复活节岛</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">复活节岛</em>
+                            <span class="mask-text">据人们推测这些被称为摩艾的石雕像是岛上古老祭拜仪式的一部分。它们制成于公元1250年至1500年间。这些石制雕像中最重的重量大约有86吨。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>巴勒贝克</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">巴勒贝克</em>
+                            <span class="mask-text">罗马人在公元前16年建造了三座纪念碑似的神庙。这三座神庙拥有三个院子，周围有墙环绕着它们。围墙使用了一些人类曾经精心制作的最庞大石块建成。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>莱亚瓦纳科</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">莱亚瓦纳科</em>
+                            <span class="mask-text">这个地方引起人类好奇的主要原因是由于它接近17000年的历史事实。人们相信某些奇特的技术被用在了这个不复存在的遗址上。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>日本水下遗址</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">日本水下遗址</em>
+                            <span class="mask-text">1995年，日本冲绳县一位游泳者和一位运动潜水员莫名其妙地游到了距离海岸更远的地方，而且发现了水下的遗址。 这些遗址似乎有8000年的历史，经过多次探索后，证实它事实上是人造的。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>奇琴伊察古城</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">奇琴伊察古城</em>
+                            <span class="mask-text">世界第七大奇观。当有人理解了这里“时间神殿”的设计，就会理解玛雅天文之法的神秘之处。奇琴伊察古城遗址中包括一系列前哥伦比亚时代玛雅人留下的建筑遗迹。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>纳斯卡线条</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">纳斯卡线条</em>
+                            <span class="mask-text">存在了2000年的谜局，这些被镶刻在大地之上的神秘线条，至今仍无人能破解——究竟是谁创造了纳斯卡线条、它们又是怎样创造出来的、神秘线条背后意味着什么？</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>金字塔</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">金字塔</em>
+                            <span class="mask-text">利用科技我们证明公元前2500年前后，大金字塔的四条坑道对准了四颗恒星。而也知道坑道与恒星对应关系，因横行纬度不断在变而相对结束，就只有一个世纪左右。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u3pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>巨石阵</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">巨石阵</em>
+                            <span class="mask-text">在一大片草地中，这些横着竖着的大石头看似毫无规律的摆放，确是人类史的一大奇迹，考古学家认为其建于公元前3000年左右，这些距今已经有4300年的巨石是如何搬运和抬放依旧是迷。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic3">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>随柯南来京都</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">随柯南来京都</em>
+                            <span class="mask-text">逛街的方式千篇一律，更有趣的地方在这里！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>札幌美景拍摄地</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">札幌美景拍摄地</em>
+                            <span class="mask-text">札幌的细节有自己独特的美，需要你的“摄影眼”来发现。</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>东京美食</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">东京平价美食</em>
+                            <span class="mask-text">东京不只拥有米其林，街角巷弄也隐藏着待你去发现的惊喜小店。</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>精彩微锦囊合辑</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">精彩微锦囊合辑</em>
+                            <span class="mask-text">跟随更多穷游er的脚步到全世界吃喝玩乐。</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>赏东京夜景</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">赏东京夜景</em>
+                            <span class="mask-text">绚丽的霓虹灯光，加上无数摩天高楼共同装点的东京夜景，值得你细细品味。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>关西赏樱</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">关西赏樱</em>
+                            <span class="mask-text">春天到关西犯“花痴”，小清新不可错过的关西赏樱好去处。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>京都美食</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">京都美食</em>
+                            <span class="mask-text">京都的米其林星级餐厅数量仅次于东京，高水准的美食值得品尝。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>小樽手信</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">小樽手信</em>
+                            <span class="mask-text">小樽手信品种繁多，买到两只手都提不动，心满意足回家去。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>札幌美食</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">札幌美食</em>
+                            <span class="mask-text">札幌的美食给你全新的味觉刺激，让人幸福感倍增。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u4pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>享乐北海道</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">享乐北海道</em>
+                            <span class="mask-text">在北海道吃喝玩乐一切都那么惬意无比。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic4">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>五渔村</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">五渔村</em>
+                            <span class="mask-text">山而建的五颜六色的房子很漂亮，海水很蓝很干净。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>阿尔勒</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">阿尔勒</em>
+                            <span class="mask-text">这是一个小巧但又大气的城市，开放热情，有很多联合国文化遗产。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>城市风光</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">城市风光</em>
+                            <span class="mask-text">若选乘阿联酋航空在迪拜转机，预订航班后，可立刻联系当地的阿联酋航空办事处或办理机票预订的旅行社，来加一份中途停留套餐——从机场接待到酒店24小时入住和旅游观光，皆可一一涵盖。来看看一众好评的24小时中途停留的城市必玩项目吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>中转怎么玩</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">中转怎么玩</em>
+                            <span class="mask-text">如果您已抵达迪拜，想在前往下一个目的地前游览迪拜，那么您也可以购买“抵达后中途停留”套餐。届时，请到迪拜国际机场办理入境手续前的到达大厅内的“迪拜酒店和签证”柜台了解购买方案。更多详情，可向阿联酋航空公司咨询。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>浪漫攻略</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">浪漫攻略</em>
+                            <span class="mask-text">从清晨到日暮，和你的Ta携手畅游迪拜的日与夜。从4个地方，发现迪拜独一无二的惊艳美景，更能收获浪漫体验。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>打卡地铁沿线目标</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">打卡地铁沿线目标</em>
+                            <span class="mask-text">方便快捷的迪拜地铁，载着人们游览这座城市的景观。一路经过知名地标；绿线围绕老城区行进，让你沉浸幽静好时光。今天我们先乘坐红线出发，赏尽繁华迪拜。前方地标云集，敬请观赏。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>免费景点</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">免费景点</em>
+                            <span class="mask-text">许多小伙伴已经体验到了来迪拜免费落地签的便利，其实来迪拜旅行还有更多暖心之处。比如今天我们为你推荐了10个免费景点，游览无门槛，好逛又好看的10个景点已经吸粉无数。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>主题乐园</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">主题乐园</em>
+                            <span class="mask-text">提起迪拜主题乐园，你最先想到的是哪里？是能和好莱坞“明星”一起游玩的Motiongate主题乐园、一步穿越到印度宝莱坞主题乐园、让小孩子和大朋友都向往的乐高主题乐园、还是惊险刺激的IMG冒险世界呢？</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>酒店体验</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">酒店体验</em>
+                            <span class="mask-text">迪拜免费落地签给人们的旅行带来便利，来迪拜转机停留数日的人越来越多。看风景之余，好好放松也是一件要事。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u5pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>亲子游迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">亲子游迪拜</em>
+                            <span class="mask-text">一个时尚繁华的迪拜，一个古老宁静的迪拜，一个缤纷欢乐的迪拜，迪拜中转停留三日游，和家人一起，认识真实的迪拜。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic5">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>爱购物的来迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">爱购物的来迪拜</em>
+                            <span class="mask-text">逛街的方式千篇一律，更有趣的地方在这里！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>看迪拜历史文化</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">看迪拜历史文化</em>
+                            <span class="mask-text">迪拜是全球航旅的重要中转站之一，每天都会迎来送往世界各地的旅客。中转的时候顺便再走进这座传奇都市中，畅享一段乐趣无限的转机停留。来看看的24小时中途停留不可错过的文化景点吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>城市风光</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">城市风光</em>
+                            <span class="mask-text">若选乘阿联酋航空在迪拜转机，预订航班后，可立刻联系当地的阿联酋航空办事处或办理机票预订的旅行社，来加一份中途停留套餐——从机场接待到酒店24小时入住和旅游观光，皆可一一涵盖。来看看一众好评的24小时中途停留的城市必玩项目吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>中转怎么玩</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">中转怎么玩</em>
+                            <span class="mask-text">如果您已抵达迪拜，想在前往下一个目的地前游览迪拜，那么您也可以购买“抵达后中途停留”套餐。届时，请到迪拜国际机场办理入境手续前的到达大厅内的“迪拜酒店和签证”柜台了解购买方案。更多详情，可向阿联酋航空公司咨询。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>浪漫攻略</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">浪漫攻略</em>
+                            <span class="mask-text">从清晨到日暮，和你的Ta携手畅游迪拜的日与夜。从4个地方，发现迪拜独一无二的惊艳美景，更能收获浪漫体验。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>打卡地铁沿线目标</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">打卡地铁沿线目标</em>
+                            <span class="mask-text">方便快捷的迪拜地铁，载着人们游览这座城市的景观。一路经过知名地标；绿线围绕老城区行进，让你沉浸幽静好时光。今天我们先乘坐红线出发，赏尽繁华迪拜。前方地标云集，敬请观赏。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>免费景点</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">免费景点</em>
+                            <span class="mask-text">许多小伙伴已经体验到了来迪拜免费落地签的便利，其实来迪拜旅行还有更多暖心之处。比如今天我们为你推荐了10个免费景点，游览无门槛，好逛又好看的10个景点已经吸粉无数。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>主题乐园</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">主题乐园</em>
+                            <span class="mask-text">提起迪拜主题乐园，你最先想到的是哪里？是能和好莱坞“明星”一起游玩的Motiongate主题乐园、一步穿越到印度宝莱坞主题乐园、让小孩子和大朋友都向往的乐高主题乐园、还是惊险刺激的IMG冒险世界呢？</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>酒店体验</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">酒店体验</em>
+                            <span class="mask-text">迪拜免费落地签给人们的旅行带来便利，来迪拜转机停留数日的人越来越多。看风景之余，好好放松也是一件要事。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u6pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>亲子游迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">亲子游迪拜</em>
+                            <span class="mask-text">一个时尚繁华的迪拜，一个古老宁静的迪拜，一个缤纷欢乐的迪拜，迪拜中转停留三日游，和家人一起，认识真实的迪拜。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic6">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>爱购物的来迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">爱购物的来迪拜</em>
+                            <span class="mask-text">逛街的方式千篇一律，更有趣的地方在这里！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>看迪拜历史文化</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">看迪拜历史文化</em>
+                            <span class="mask-text">迪拜是全球航旅的重要中转站之一，每天都会迎来送往世界各地的旅客。中转的时候顺便再走进这座传奇都市中，畅享一段乐趣无限的转机停留。来看看的24小时中途停留不可错过的文化景点吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>城市风光</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">城市风光</em>
+                            <span class="mask-text">若选乘阿联酋航空在迪拜转机，预订航班后，可立刻联系当地的阿联酋航空办事处或办理机票预订的旅行社，来加一份中途停留套餐——从机场接待到酒店24小时入住和旅游观光，皆可一一涵盖。来看看一众好评的24小时中途停留的城市必玩项目吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>中转怎么玩</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">中转怎么玩</em>
+                            <span class="mask-text">如果您已抵达迪拜，想在前往下一个目的地前游览迪拜，那么您也可以购买“抵达后中途停留”套餐。届时，请到迪拜国际机场办理入境手续前的到达大厅内的“迪拜酒店和签证”柜台了解购买方案。更多详情，可向阿联酋航空公司咨询。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>浪漫攻略</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">浪漫攻略</em>
+                            <span class="mask-text">从清晨到日暮，和你的Ta携手畅游迪拜的日与夜。从4个地方，发现迪拜独一无二的惊艳美景，更能收获浪漫体验。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>打卡地铁沿线目标</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">打卡地铁沿线目标</em>
+                            <span class="mask-text">方便快捷的迪拜地铁，载着人们游览这座城市的景观。一路经过知名地标；绿线围绕老城区行进，让你沉浸幽静好时光。今天我们先乘坐红线出发，赏尽繁华迪拜。前方地标云集，敬请观赏。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>免费景点</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">免费景点</em>
+                            <span class="mask-text">许多小伙伴已经体验到了来迪拜免费落地签的便利，其实来迪拜旅行还有更多暖心之处。比如今天我们为你推荐了10个免费景点，游览无门槛，好逛又好看的10个景点已经吸粉无数。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>主题乐园</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">主题乐园</em>
+                            <span class="mask-text">提起迪拜主题乐园，你最先想到的是哪里？是能和好莱坞“明星”一起游玩的Motiongate主题乐园、一步穿越到印度宝莱坞主题乐园、让小孩子和大朋友都向往的乐高主题乐园、还是惊险刺激的IMG冒险世界呢？</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>酒店体验</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">酒店体验</em>
+                            <span class="mask-text">迪拜免费落地签给人们的旅行带来便利，来迪拜转机停留数日的人越来越多。看风景之余，好好放松也是一件要事。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u7pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>亲子游迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">亲子游迪拜</em>
+                            <span class="mask-text">一个时尚繁华的迪拜，一个古老宁静的迪拜，一个缤纷欢乐的迪拜，迪拜中转停留三日游，和家人一起，认识真实的迪拜。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="picList" id="worldPic7">
+            <li class="pic1">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic1.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>爱购物的来迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">爱购物的来迪拜</em>
+                            <span class="mask-text">逛街的方式千篇一律，更有趣的地方在这里！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic2">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic2.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>看迪拜历史文化</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">看迪拜历史文化</em>
+                            <span class="mask-text">迪拜是全球航旅的重要中转站之一，每天都会迎来送往世界各地的旅客。中转的时候顺便再走进这座传奇都市中，畅享一段乐趣无限的转机停留。来看看的24小时中途停留不可错过的文化景点吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic3">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic3.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>城市风光</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">城市风光</em>
+                            <span class="mask-text">若选乘阿联酋航空在迪拜转机，预订航班后，可立刻联系当地的阿联酋航空办事处或办理机票预订的旅行社，来加一份中途停留套餐——从机场接待到酒店24小时入住和旅游观光，皆可一一涵盖。来看看一众好评的24小时中途停留的城市必玩项目吧！</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic4">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic4.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>中转怎么玩</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">中转怎么玩</em>
+                            <span class="mask-text">如果您已抵达迪拜，想在前往下一个目的地前游览迪拜，那么您也可以购买“抵达后中途停留”套餐。届时，请到迪拜国际机场办理入境手续前的到达大厅内的“迪拜酒店和签证”柜台了解购买方案。更多详情，可向阿联酋航空公司咨询。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic5">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic5.jpg" alt="" width="192" height="405"/>
+
+                    <h3 class="title"><span>浪漫攻略</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">浪漫攻略</em>
+                            <span class="mask-text">从清晨到日暮，和你的Ta携手畅游迪拜的日与夜。从4个地方，发现迪拜独一无二的惊艳美景，更能收获浪漫体验。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic6">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic6.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>打卡地铁沿线目标</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">打卡地铁沿线目标</em>
+                            <span class="mask-text">方便快捷的迪拜地铁，载着人们游览这座城市的景观。一路经过知名地标；绿线围绕老城区行进，让你沉浸幽静好时光。今天我们先乘坐红线出发，赏尽繁华迪拜。前方地标云集，敬请观赏。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic7">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic7.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>免费景点</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">免费景点</em>
+                            <span class="mask-text">许多小伙伴已经体验到了来迪拜免费落地签的便利，其实来迪拜旅行还有更多暖心之处。比如今天我们为你推荐了10个免费景点，游览无门槛，好逛又好看的10个景点已经吸粉无数。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic8">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic8.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>主题乐园</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">主题乐园</em>
+                            <span class="mask-text">提起迪拜主题乐园，你最先想到的是哪里？是能和好莱坞“明星”一起游玩的Motiongate主题乐园、一步穿越到印度宝莱坞主题乐园、让小孩子和大朋友都向往的乐高主题乐园、还是惊险刺激的IMG冒险世界呢？</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic9">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic9.jpg" alt="" width="192" height="200"/>
+
+                    <h3 class="title"><span>酒店体验</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">酒店体验</em>
+                            <span class="mask-text">迪拜免费落地签给人们的旅行带来便利，来迪拜转机停留数日的人越来越多。看风景之余，好好放松也是一件要事。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="pic10">
+                <a href="" target="_blank">
+                    <img src="picture/u8pic10.jpg" alt="" width="389" height="200"/>
+
+                    <h3 class="title"><span>亲子游迪拜</span></h3>
+
+                    <div class="mask">
+                        <p class="mask-p">
+                            <em class="mask-head">亲子游迪拜</em>
+                            <span class="mask-text">一个时尚繁华的迪拜，一个古老宁静的迪拜，一个缤纷欢乐的迪拜，迪拜中转停留三日游，和家人一起，认识真实的迪拜。</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--探索区域结束-->
+<!--国家区域开始-->
+<div id="country">
+    <!-- 国家导航-->
+    <div id="coun-nav">
+        <h2>国家列表</h2>
+        <ul id="u2">
+            <li><a href="javascript:void(0)" class="nowrent">全部</a></li>
+            <li><a href="javascript:void(0)">亚洲</a></li>
+            <li><a href="javascript:void(0)">欧洲</a></li>
+            <li><a href="javascript:void(0)">非洲</a></li>
+            <li><a href="javascript:void(0)">北美</a></li>
+            <li><a href="javascript:void(0)">南美</a></li>
+            <li><a href="javascript:void(0)">大洋洲</a></li>
+            <li><a href="javascript:void(0)">南极洲</a></li>
+        </ul>
+    </div>
+    <!-- 国家板块-->
+    <div id="coun-list">
+        <div class="coun clearfloat" id="coun1">
+            <h2 class="title">
+                <em><a href="javascript:void(0)">亚洲Asia</a></em>
+                <span>(拼音首字母排序)</span>
+            </h2>
+            <div class="line1">
+                <ul class="list">
+                    <li class="item"><a href="javascript:void(0)">阿富汗
+                        <span class="en">Afghanistan</span></a>
+                    </li>
+                    <li class="item">
+                        <p class="hot">
+                            <a href="javascript:void(0)">阿联酋 <span class="en">United Arab Emirates</span></a>
+                        </p>
+                    </li>
+                    <li class="item"><a href="javascript:void(0)">阿曼 <span
+                            class="en">Oman</span></a></li>
+                    <li class="item"><a href="javascript:void(0)">巴基斯坦
+                        <span class="en">Pakistan</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)">巴勒斯坦
+                        <span class="en">Palestine</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)">巴林
+                        <span class="en">Bahrain</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)">不丹
+                        <span class="en">Bhutan</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)">朝鲜
+                        <span class="en">North Korea</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)">东帝汶
+                        <span class="en">East Timor</span></a></li>
+
+
+                    <li class="item">
+                        <p class="hot">
+                            <a href="javascript:void(0)">菲律宾 <span class="en">Philippines</span></a>
+                        </p>
+                    </li>
+                    <li class="item">
+                        <p class="hot">
+                            <a href="javascript:void(0)">韩国 <span class="en">South Korea</span></a>
+                        </p>
+                    </li>
+                    <li class="item"><a href="javascript:void(0)">哈萨克斯坦
+                        <span class="en">Kazakhstan</span></a></li>
+                    <li class="item">
+                        <p class="hot">
+                            <a href="javascript:void(0)">柬埔寨
+                                <span class="en">Cambodia</span>
+                            </a>
+                        </p>
+                    </li>
+
+
+                    <li class="item"><a href="javascript:void(0)">吉尔吉斯斯坦
+                        <span class="en">Kyrgyzstan</span></a>
+                    </li>
+                    <li class="item"><a href="javascript:void(0)">卡塔尔
+                        <span class="en">Qatar</span></a></li>
+                </ul>
+            </div>
+            <div class="line2">
+                <ul class="list">
+                    <li class="item"><a href="javascript:void(0)">科威特
+                        <span class="en">Kuwait</span></a>
+                    </li>
+                    <li class="item">
+                        <p class="hot">
+                            <a href="javascript:void(0)">老挝 <span class="en">Laos</span></a>
+                        </p>
+                    </li>
+                    <li class="item"><a href="javascript:void(0)">黎巴嫩
+                        <span class="en">Lebanon</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="javascript:void(0)">马尔代夫 <span
+                            class="en">Maldives</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="javascript:void(0)">马来西亚 <span
+                            class="en">Malaysia</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="javascript:void(0)" data-bn-ipg="place-index-countrylist-507">蒙古
+                        <span class="en">Mongolia</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)" data-bn-ipg="place-index-countrylist-508">孟加拉国
+                        <span class="en">Bangladesh</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)" data-bn-ipg="place-index-countrylist-511">缅甸
+                        <span class="en">Myanmar</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="javascript:void(0)">尼泊尔 <span class="en">Nepal</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="javascript:void(0)">日本 <span class="en">Japan</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="javascript:void(0)" data-bn-ipg="place-index-countrylist-532">沙特阿拉伯
+                        <span class="en">Saudi Arabia</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="javascript:void(0)">斯里兰卡 <span class="en">Sri Lanka</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="javascript:void(0)">泰国 <span class="en">Thailand</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="javascript:void(0)" data-bn-ipg="place-index-countrylist-544">塔吉克斯坦
+                        <span class="en">Tajikistan</span></a></li>
+
+
+                    <li class="item"><a href="javascript:void(0)" data-bn-ipg="place-index-countrylist-552">土库曼斯坦
+                        <span class="en">Turkmenistan</span></a></li>
+
+                </ul>
+            </div>
+            <div class="line3">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/brunei/" data-bn-ipg="place-index-countrylist-558">文莱
+                        <span class="en">Brunei</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/uzbekistan/" data-bn-ipg="place-index-countrylist-562">乌兹别克斯坦
+                        <span class="en">Uzbekistan</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/singapore/"
+                                                       data-bn-ipg="place-index-countrylist-232">新加坡 <span class="en">Singapore</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/syria/" data-bn-ipg="place-index-countrylist-564">叙利亚
+                        <span class="en">Syria</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/yemen/" data-bn-ipg="place-index-countrylist-567">也门
+                        <span class="en">Yemen</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/iraq/" data-bn-ipg="place-index-countrylist-1035">伊拉克
+                        <span class="en">Iraq</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/iran/" data-bn-ipg="place-index-countrylist-568">伊朗 <span
+                            class="en">Iran</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/india/"
+                                                       data-bn-ipg="place-index-countrylist-231">印度 <span class="en">India</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/indonesia/"
+                                                       data-bn-ipg="place-index-countrylist-570">印度尼西亚 <span class="en">Indonesia</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/british-indian-ocean-territory/"
+                                        data-bn-ipg="place-index-countrylist-1425">英属印度洋领地 <span class="en">British Indian Ocean Territory</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/israel/" data-bn-ipg="place-index-countrylist-569">以色列
+                        <span class="en">Israel</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/jordan/" data-bn-ipg="place-index-countrylist-572">约旦
+                        <span class="en">Jordan</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/vietnam/"
+                                                       data-bn-ipg="place-index-countrylist-216">越南 <span class="en">Vietnam</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/china/"
+                                                       data-bn-ipg="place-index-countrylist-11">中国 <span class="en">China</span></a>
+                    </p></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="coun clearfloat" id="coun2">
+            <h2 class="title">
+                <em><a href="javascript:void(0)">欧洲Europe</a></em>
+                <span>(拼音首字母排序)</span>
+            </h2>
+            <div class="line1">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/albania/" data-bn-ipg="place-index-countrylist-399">阿尔巴尼亚
+                        <span class="en">Albania</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/ireland/" data-bn-ipg="place-index-countrylist-406">爱尔兰
+                        <span class="en">Ireland</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/estonia/" data-bn-ipg="place-index-countrylist-407">爱沙尼亚
+                        <span class="en">Estonia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/andorra/" data-bn-ipg="place-index-countrylist-408">安道尔
+                        <span class="en">Andorra</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/austria/"
+                                                       data-bn-ipg="place-index-countrylist-198">奥地利 <span class="en">Austria</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/azerbaijan/" data-bn-ipg="place-index-countrylist-404">阿塞拜疆
+                        <span class="en">Azerbaijan</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/belarus/" data-bn-ipg="place-index-countrylist-418">白俄罗斯
+                        <span class="en">Belarus</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/bulgaria/" data-bn-ipg="place-index-countrylist-421">保加利亚
+                        <span class="en">Bulgaria</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/belgium/"
+                                                       data-bn-ipg="place-index-countrylist-424">比利时 <span class="en">Belgium</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/iceland/"
+                                                       data-bn-ipg="place-index-countrylist-425">冰岛 <span class="en">Iceland</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/bosnia-and-herzegovina/"
+                                        data-bn-ipg="place-index-countrylist-428">波黑 <span class="en">Bosnia & Herzegovina</span></a>
+                    </li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/poland/"
+                                                       data-bn-ipg="place-index-countrylist-427">波兰 <span class="en">Poland</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/denmark/"
+                                                       data-bn-ipg="place-index-countrylist-205">丹麦 <span class="en">Denmark</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/germany/"
+                                                       data-bn-ipg="place-index-countrylist-15">德国 <span class="en">Germany</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/russia/"
+                                                       data-bn-ipg="place-index-countrylist-208">俄罗斯 <span class="en">Russia</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/france/"
+                                                       data-bn-ipg="place-index-countrylist-186">法国 <span class="en">France</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/faroe-islands/"
+                                        data-bn-ipg="place-index-countrylist-445">法罗群岛 <span
+                            class="en">Faroe Islands</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/vatican/"
+                                                       data-bn-ipg="place-index-countrylist-804">梵蒂冈 <span class="en">Vatican</span></a>
+                    </p></li>
+
+
+                </ul>
+            </div>
+            <div class="line2">
+                <ul class="list">
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/finland/"
+                                                       data-bn-ipg="place-index-countrylist-448">芬兰 <span class="en">Finland</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/greenland/" data-bn-ipg="place-index-countrylist-456">格陵兰
+                        <span class="en">Greenland</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/georgia/" data-bn-ipg="place-index-countrylist-457">格鲁吉亚
+                        <span class="en">Georgia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/montenegro/" data-bn-ipg="place-index-countrylist-464">黑山
+                        <span class="en">Montenegro</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/netherlands/"
+                                                       data-bn-ipg="place-index-countrylist-200">荷兰 <span class="en">Netherlands</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/czech-republic/"
+                                                       data-bn-ipg="place-index-countrylist-193">捷克 <span class="en">Czech Republic</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/croatia/"
+                                                       data-bn-ipg="place-index-countrylist-482">克罗地亚 <span class="en">Croatia</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/kosovo/" data-bn-ipg="place-index-countrylist-479">科索沃
+                        <span class="en">Kosovo</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/latvia/" data-bn-ipg="place-index-countrylist-485">拉脱维亚
+                        <span class="en">Latvia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/liechtenstein/"
+                                        data-bn-ipg="place-index-countrylist-762">列支敦士登 <span
+                            class="en">Liechtenstein</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/lithuania/" data-bn-ipg="place-index-countrylist-489">立陶宛
+                        <span class="en">Lithuania</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/romania/" data-bn-ipg="place-index-countrylist-495">罗马尼亚
+                        <span class="en">Romania</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/luxembourg/"
+                                                       data-bn-ipg="place-index-countrylist-493">卢森堡 <span class="en">Luxembourg</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/malta/" data-bn-ipg="place-index-countrylist-498">马耳他
+                        <span class="en">Malta</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/macedonia/" data-bn-ipg="place-index-countrylist-501">马其顿
+                        <span class="en">Macedonia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/moldova/" data-bn-ipg="place-index-countrylist-512">摩尔多瓦
+                        <span class="en">Moldova</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/monaco/"
+                                                       data-bn-ipg="place-index-countrylist-654">摩纳哥 <span class="en">Monaco</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/norway/"
+                                                       data-bn-ipg="place-index-countrylist-521">挪威 <span class="en">Norway</span></a>
+                    </p></li>
+
+
+                </ul>
+            </div>
+            <div class="line3">
+                <ul class="list">
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/portugal/"
+                                                       data-bn-ipg="place-index-countrylist-523">葡萄牙 <span class="en">Portugal</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/sweden/"
+                                                       data-bn-ipg="place-index-countrylist-202">瑞典 <span class="en">Sweden</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/switzerland/"
+                                                       data-bn-ipg="place-index-countrylist-524">瑞士 <span class="en">Switzerland</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/serbia/" data-bn-ipg="place-index-countrylist-527">塞尔维亚
+                        <span class="en">Serbia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/cyprus/" data-bn-ipg="place-index-countrylist-530">塞浦路斯
+                        <span class="en">Cyprus</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/san-marino/" data-bn-ipg="place-index-countrylist-785">圣马力诺
+                        <span class="en">San Marino</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/slovakia/"
+                                                       data-bn-ipg="place-index-countrylist-538">斯洛伐克 <span class="en">Slovakia</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/slovenia/" data-bn-ipg="place-index-countrylist-539">斯洛文尼亚
+                        <span class="en">Slovenia</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/turkey/"
+                                                       data-bn-ipg="place-index-countrylist-195">土耳其 <span class="en">Turkey</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/ukraine/" data-bn-ipg="place-index-countrylist-560">乌克兰
+                        <span class="en">Ukraine</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/spain/"
+                                                       data-bn-ipg="place-index-countrylist-182">西班牙 <span class="en">Spain</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/greece/"
+                                                       data-bn-ipg="place-index-countrylist-206">希腊 <span class="en">Greece</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/principality-of-sealand/"
+                                        data-bn-ipg="place-index-countrylist-1445">西兰公国 <span class="en">Principality of Sealand</span></a>
+                    </li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/hungary/"
+                                                       data-bn-ipg="place-index-countrylist-207">匈牙利 <span class="en">Hungary</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/armenia/" data-bn-ipg="place-index-countrylist-566">亚美尼亚
+                        <span class="en">Armenia</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/italy/"
+                                                       data-bn-ipg="place-index-countrylist-189">意大利 <span class="en">Italy</span></a>
+                    </p></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/uk/"
+                                                       data-bn-ipg="place-index-countrylist-13">英国 <span
+                            class="en">UK</span></a></p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/gibraltar/" data-bn-ipg="place-index-countrylist-805">直布罗陀
+                        <span class="en">Gibraltar</span></a></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="coun clearfloat" id="coun3">
+            <h2 class="title">
+                <em><a href="javascript:void(0)">非洲Africa</a></em>
+                <span>(拼音首字母排序)</span>
+            </h2>
+            <div class="line1">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/algeria/" data-bn-ipg="place-index-countrylist-400">阿尔及利亚
+                        <span class="en">Algeria</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/egypt/"
+                                                       data-bn-ipg="place-index-countrylist-244">埃及 <span class="en">Egypt</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/ethiopia/" data-bn-ipg="place-index-countrylist-405">埃塞俄比亚
+                        <span class="en">Ethiopia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/angola/" data-bn-ipg="place-index-countrylist-409">安哥拉
+                        <span class="en">Angola</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/ascension/" data-bn-ipg="place-index-countrylist-1422">阿森松
+                        <span class="en">Ascension</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/benin/" data-bn-ipg="place-index-countrylist-423">贝宁
+                        <span class="en">Benin</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/kingdom-of-north-sudan/"
+                                        data-bn-ipg="place-index-countrylist-2001">北苏丹王国 <span class="en">Kingdom of North Sudan</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/botswana/" data-bn-ipg="place-index-countrylist-431">博茨瓦纳
+                        <span class="en">Botswana</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/burkina-faso/" data-bn-ipg="place-index-countrylist-434">布基纳法索
+                        <span class="en">Burkina Faso</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/burundi/" data-bn-ipg="place-index-countrylist-435">布隆迪
+                        <span class="en">Burundi</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/equatorial-guinea/"
+                                        data-bn-ipg="place-index-countrylist-437">赤道几内亚 <span class="en">Equatorial Guinea</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/cape-verde/" data-bn-ipg="place-index-countrylist-1061">佛得角
+                        <span class="en">Cape Verde</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/togo/" data-bn-ipg="place-index-countrylist-439">多哥 <span
+                            class="en">Togo</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/eritrea/" data-bn-ipg="place-index-countrylist-444">厄立特里亚
+                        <span class="en">Eritrea</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/gambia/" data-bn-ipg="place-index-countrylist-450">冈比亚
+                        <span class="en">Gambia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/congo-brazzaville/"
+                                        data-bn-ipg="place-index-countrylist-451">刚果 <span
+                            class="en">Congo-Brazzaville</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/congo-kinshasa/"
+                                        data-bn-ipg="place-index-countrylist-452">刚果民主共和国 <span class="en">Congo-Kinshasa</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/ghana/" data-bn-ipg="place-index-countrylist-471">加纳
+                        <span class="en">Ghana</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/gabon/" data-bn-ipg="place-index-countrylist-473">加蓬
+                        <span class="en">Gabon</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/djibouti/" data-bn-ipg="place-index-countrylist-467">吉布提
+                        <span class="en">Djibouti</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/zimbabwe/" data-bn-ipg="place-index-countrylist-474">津巴布韦
+                        <span class="en">Zimbabwe</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line2">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/guinea/" data-bn-ipg="place-index-countrylist-469">几内亚
+                        <span class="en">Guinea</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/guinea-bissau/"
+                                        data-bn-ipg="place-index-countrylist-470">几内亚比绍 <span
+                            class="en">Guinea Bissau</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/cameroon/" data-bn-ipg="place-index-countrylist-475">喀麦隆
+                        <span class="en">Cameroon</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/comoros/" data-bn-ipg="place-index-countrylist-478">科摩罗
+                        <span class="en">Comoros</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/kenya/" data-bn-ipg="place-index-countrylist-483">肯尼亚
+                        <span class="en">Kenya</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/cote-divoire/" data-bn-ipg="place-index-countrylist-480">科特迪瓦
+                        <span class="en">Cote Divoire</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/lesotho/" data-bn-ipg="place-index-countrylist-486">莱索托
+                        <span class="en">Lesotho</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/liberia/" data-bn-ipg="place-index-countrylist-490">利比里亚
+                        <span class="en">Liberia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/libya/" data-bn-ipg="place-index-countrylist-491">利比亚
+                        <span class="en">Libya</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/reunion/" data-bn-ipg="place-index-countrylist-492">留尼汪
+                        <span class="en">Reunion</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/rwanda/" data-bn-ipg="place-index-countrylist-494">卢旺达
+                        <span class="en">Rwanda</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/madagascar/" data-bn-ipg="place-index-countrylist-496">马达加斯加
+                        <span class="en">Madagascar</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/malawi/" data-bn-ipg="place-index-countrylist-499">马拉维
+                        <span class="en">Malawi</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/mali/" data-bn-ipg="place-index-countrylist-500">马里 <span
+                            class="en">Mali</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/mauritius/" data-bn-ipg="place-index-countrylist-503">毛里求斯
+                        <span class="en">Mauritius</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/mauritania/" data-bn-ipg="place-index-countrylist-504">毛里塔尼亚
+                        <span class="en">Mauritania</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/mayotte/" data-bn-ipg="place-index-countrylist-1426">马约特
+                        <span class="en">Mayotte</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/morocco/"
+                                                       data-bn-ipg="place-index-countrylist-513">摩洛哥 <span class="en">Morocco</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/mozambique/" data-bn-ipg="place-index-countrylist-514">莫桑比克
+                        <span class="en">Mozambique</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/namibia/" data-bn-ipg="place-index-countrylist-516">纳米比亚
+                        <span class="en">Namibia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/south-africa/" data-bn-ipg="place-index-countrylist-517">南非
+                        <span class="en">South Africa</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line3">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/south-sudan/" data-bn-ipg="place-index-countrylist-853">南苏丹
+                        <span class="en">South Sudan</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/niger/" data-bn-ipg="place-index-countrylist-519">尼日尔
+                        <span class="en">Niger</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/nigeria/" data-bn-ipg="place-index-countrylist-520">尼日利亚
+                        <span class="en">Nigeria</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/sierra-leone/" data-bn-ipg="place-index-countrylist-528">塞拉利昂
+                        <span class="en">Sierra Leone</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/senegal/" data-bn-ipg="place-index-countrylist-529">塞内加尔
+                        <span class="en">Senegal</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/seychelles/" data-bn-ipg="place-index-countrylist-531">塞舌尔
+                        <span class="en">Seychelles</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/sao-tome-and-principe/"
+                                        data-bn-ipg="place-index-countrylist-533">圣多美和普林西比 <span class="en">Sao Tome & Principe</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/saint-helena/"
+                                        data-bn-ipg="place-index-countrylist-1328">圣赫勒拿 <span
+                            class="en">Saint Helena</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/swaziland/" data-bn-ipg="place-index-countrylist-540">斯威士兰
+                        <span class="en">Swaziland</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/sudan/" data-bn-ipg="place-index-countrylist-541">苏丹
+                        <span class="en">Sudan</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/somalia/" data-bn-ipg="place-index-countrylist-420">索马里
+                        <span class="en">Somalia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/tanzania/" data-bn-ipg="place-index-countrylist-546">坦桑尼亚
+                        <span class="en">Tanzania</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/tristan-da-cunha/"
+                                        data-bn-ipg="place-index-countrylist-1423">特里斯坦-达库尼亚群岛 <span class="en">Tristan da Cunha</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/tunisia/" data-bn-ipg="place-index-countrylist-550">突尼斯
+                        <span class="en">Tunisia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/uganda/" data-bn-ipg="place-index-countrylist-559">乌干达
+                        <span class="en">Uganda</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/western-sahara/"
+                                        data-bn-ipg="place-index-countrylist-1062">西撒哈拉 <span
+                            class="en">Western Sahara</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/zambia/" data-bn-ipg="place-index-countrylist-573">赞比亚
+                        <span class="en">Zambia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/chad/" data-bn-ipg="place-index-countrylist-574">乍得 <span
+                            class="en">Chad</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/central-african-republic/"
+                                        data-bn-ipg="place-index-countrylist-576">中非共和国 <span class="en">Central African Republic</span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="coun clearfloat" id="coun4">
+            <h2 class="title clearfix">
+                <em><a href="javascript:void(0)">北美 North America</a></em>
+                <span>(拼音首字母排序)</span>
+            </h2>
+            <div class="line1">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/anguilla/" data-bn-ipg="place-index-countrylist-1416">安圭拉
+                        <span class="en">Anguilla</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/antigua-and-barbuda/"
+                                        data-bn-ipg="place-index-countrylist-410">安提瓜和巴布达 <span class="en">Antigua & Barbuda</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/barbados/" data-bn-ipg="place-index-countrylist-411">巴巴多斯
+                        <span class="en">Barbados</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/the-bahamas/" data-bn-ipg="place-index-countrylist-413">巴哈马
+                        <span class="en">The Bahamas</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/bermuda/" data-bn-ipg="place-index-countrylist-419">百慕大
+                        <span class="en">Bermuda</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/panama/" data-bn-ipg="place-index-countrylist-417">巴拿马
+                        <span class="en">Panama</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/puerto-rico/" data-bn-ipg="place-index-countrylist-426">波多黎各
+                        <span class="en">Puerto Rico</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/belize/" data-bn-ipg="place-index-countrylist-430">伯利兹
+                        <span class="en">Belize</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/aruba/" data-bn-ipg="place-index-countrylist-432">阿鲁巴
+                        <span class="en">Aruba</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/bonaire/" data-bn-ipg="place-index-countrylist-1432">波内赫
+                        <span class="en">Bonaire</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/dominican-republic/"
+                                        data-bn-ipg="place-index-countrylist-440">多米尼加共和国 <span class="en">Dominican Republic</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/dominica/" data-bn-ipg="place-index-countrylist-441">多米尼克
+                        <span class="en">Dominica</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/saint-martin/"
+                                        data-bn-ipg="place-index-countrylist-1383">法属圣马丁 <span
+                            class="en">Saint Martin</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/grenada/" data-bn-ipg="place-index-countrylist-455">格林纳达
+                        <span class="en">Grenada</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line2">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/costa-rica/" data-bn-ipg="place-index-countrylist-454">哥斯达黎加
+                        <span class="en">Costa Rica</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/guadeloupe/" data-bn-ipg="place-index-countrylist-1295">瓜德罗普
+                        <span class="en">Guadeloupe</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/cuba/" data-bn-ipg="place-index-countrylist-458">古巴 <span
+                            class="en">Cuba</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/haiti/" data-bn-ipg="place-index-countrylist-462">海地
+                        <span class="en">Haiti</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/sint-maarten/"
+                                        data-bn-ipg="place-index-countrylist-1382">荷属圣马丁 <span
+                            class="en">Sint Maarten</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/honduras/" data-bn-ipg="place-index-countrylist-465">洪都拉斯
+                        <span class="en">Honduras</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/canada/"
+                                                       data-bn-ipg="place-index-countrylist-238">加拿大 <span class="en">Canada</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/cayman-islands/"
+                                        data-bn-ipg="place-index-countrylist-477">开曼群岛 <span
+                            class="en">Cayman Islands</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/curacao/" data-bn-ipg="place-index-countrylist-1419">库拉索
+                        <span class="en">Curacao</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/martinique/" data-bn-ipg="place-index-countrylist-1380">马提尼克
+                        <span class="en">Martinique</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/usa/"
+                                                       data-bn-ipg="place-index-countrylist-236">美国 <span
+                            class="en">USA</span></a></p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/us-virgin-islands/"
+                                        data-bn-ipg="place-index-countrylist-506">美属维尔京群岛 <span class="en">US Virgin Islands</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/montserrat/" data-bn-ipg="place-index-countrylist-1418">蒙塞拉特岛
+                        <span class="en">Montserrat</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/mexico/"
+                                                       data-bn-ipg="place-index-countrylist-515">墨西哥 <span class="en">Mexico</span></a>
+                    </p></li>
+
+
+                </ul>
+            </div>
+            <div class="line3">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/nicaragua/" data-bn-ipg="place-index-countrylist-518">尼加拉瓜
+                        <span class="en">Nicaragua</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/saba/" data-bn-ipg="place-index-countrylist-1421">萨巴岛
+                        <span class="en">Saba</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/el-salvador/" data-bn-ipg="place-index-countrylist-525">萨尔瓦多
+                        <span class="en">El Salvador</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/saint-barthelemy/"
+                                        data-bn-ipg="place-index-countrylist-1417">圣巴泰勒米岛 <span class="en">Saint-Barthelemy</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/saint-kitts-and-nevis/"
+                                        data-bn-ipg="place-index-countrylist-534">圣基茨和尼维斯 <span class="en">Saint Kitts and Nevis</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/st-lucia/" data-bn-ipg="place-index-countrylist-535">圣卢西亚
+                        <span class="en">St Lucia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/saint-pierre-et-miquelon/"
+                                        data-bn-ipg="place-index-countrylist-1381">圣皮埃尔和密克隆群岛 <span class="en">Saint Pierre et Miquelon</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/st-vincent-and-the-grenadines/"
+                                        data-bn-ipg="place-index-countrylist-536">圣文森特和格林纳丁斯 <span class="en">St Vincent & The Grenadines</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/sint-eustatius/"
+                                        data-bn-ipg="place-index-countrylist-1420">圣尤斯特歇斯 <span class="en">Sint Eustatius</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/turks-and-caicos-islands/"
+                                        data-bn-ipg="place-index-countrylist-548">特克斯和凯科斯群岛 <span class="en">Turks & Caicos Islands</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/trinidad-and-tobago/"
+                                        data-bn-ipg="place-index-countrylist-549">特立尼达和多巴哥 <span class="en">Trinidad & Tobago</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/guatemala/" data-bn-ipg="place-index-countrylist-555">危地马拉
+                        <span class="en">Guatemala</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/jamaica/" data-bn-ipg="place-index-countrylist-565">牙买加
+                        <span class="en">Jamaica</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/british-virgin-islands/"
+                                        data-bn-ipg="place-index-countrylist-571">英属维尔京群岛 <span class="en">British Virgin Islands</span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="coun clearfloat" id="coun5">
+            <h2 class="title clearfix">
+                <em><a href="javascript:void(0)">南美 South America</a></em>
+                <span>(拼音首字母排序)</span>
+            </h2>
+            <div class="line1">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/argentina/" data-bn-ipg="place-index-countrylist-243">阿根廷
+                        <span class="en">Argentina</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/paraguay/" data-bn-ipg="place-index-countrylist-415">巴拉圭
+                        <span class="en">Paraguay</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/brazil/" data-bn-ipg="place-index-countrylist-242">巴西
+                        <span class="en">Brazil</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/peru/" data-bn-ipg="place-index-countrylist-509">秘鲁 <span
+                            class="en">Peru</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/bolivia/" data-bn-ipg="place-index-countrylist-429">玻利维亚
+                        <span class="en">Bolivia</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line2">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/ecuador/" data-bn-ipg="place-index-countrylist-443">厄瓜多尔
+                        <span class="en">Ecuador</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/french-guiana/"
+                                        data-bn-ipg="place-index-countrylist-1292">法属圭亚那 <span
+                            class="en">French Guiana</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/falkland-islands/"
+                                        data-bn-ipg="place-index-countrylist-449">福克兰群岛（马尔维纳斯群岛） <span class="en">Falkland Islands</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/colombia/" data-bn-ipg="place-index-countrylist-453">哥伦比亚
+                        <span class="en">Colombia</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/guyana/" data-bn-ipg="place-index-countrylist-460">圭亚那
+                        <span class="en">Guyana</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line3">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/suriname/" data-bn-ipg="place-index-countrylist-1293">苏里南
+                        <span class="en">Suriname</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/venezuela/" data-bn-ipg="place-index-countrylist-557">委内瑞拉
+                        <span class="en">Venezuela</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/uruguay/" data-bn-ipg="place-index-countrylist-561">乌拉圭
+                        <span class="en">Uruguay</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/chile/" data-bn-ipg="place-index-countrylist-575">智利
+                        <span class="en">Chile</span></a></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="coun clearfloat" id="coun6">
+            <h2 class="title clearfix">
+                <em><a href="javascript:void(0)">大洋洲Oceania</a></em>
+                <span>(拼音首字母排序)</span>
+            </h2>
+            <div class="line1">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/apolofirl/" data-bn-ipg="place-index-countrylist-806">艾普罗菲尔
+                        <span class="en">Apolofirl</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/australia/"
+                                                       data-bn-ipg="place-index-countrylist-240">澳大利亚 <span class="en">Australia</span></a>
+                    </p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/papua-new-guinea/"
+                                        data-bn-ipg="place-index-countrylist-412">巴布亚新几内亚 <span class="en">Papua New Guinea</span></a>
+                    </li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/northern-mariana-islands/"
+                                                       data-bn-ipg="place-index-countrylist-422">北马里亚纳群岛 <span
+                            class="en">Northern Mariana Islands</span></a></p></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/french-polynesia/"
+                                        data-bn-ipg="place-index-countrylist-545">法属波利尼西亚 <span class="en">French Polynesia</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/fiji/" data-bn-ipg="place-index-countrylist-447">斐济 <span
+                            class="en">Fiji</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/guam/" data-bn-ipg="place-index-countrylist-1072">关岛
+                        <span class="en">Guam</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/kiribati/" data-bn-ipg="place-index-countrylist-466">基里巴斯
+                        <span class="en">Kiribati</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/the-cook-islands/"
+                                        data-bn-ipg="place-index-countrylist-484">库克群岛 <span
+                            class="en">The Cook Islands</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line2">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/marshall-islands/"
+                                        data-bn-ipg="place-index-countrylist-502">马绍尔群岛 <span class="en">Marshall Islands</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/american-samoa/"
+                                        data-bn-ipg="place-index-countrylist-505">美属萨摩亚 <span
+                            class="en">American Samoa</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/federated-states-of-micronesia/"
+                                        data-bn-ipg="place-index-countrylist-510">密克罗尼西亚联邦 <span class="en">Federated States Of  Micronesia</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="">瑙鲁
+                        <span class="en">    Nauru</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/niue/" data-bn-ipg="place-index-countrylist-1064">纽埃
+                        <span class="en">Niue</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/palau/" data-bn-ipg="place-index-countrylist-522">帕劳
+                        <span class="en">Palau</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/pitcairn-islands/"
+                                        data-bn-ipg="place-index-countrylist-1428">皮特凯恩群岛 <span class="en">Pitcairn Islands</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/samoa/" data-bn-ipg="place-index-countrylist-526">萨摩亚
+                        <span class="en">Samoa</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/solomon-islands/"
+                                        data-bn-ipg="place-index-countrylist-543">所罗门群岛 <span
+                            class="en">Solomon Islands</span></a></li>
+
+
+                </ul>
+            </div>
+            <div class="line3">
+                <ul class="list">
+
+
+                    <li class="item"><a href="//place.qyer.com/tonga/" data-bn-ipg="place-index-countrylist-547">汤加
+                        <span class="en">Tonga</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/tokelau/" data-bn-ipg="place-index-countrylist-1063">托克劳
+                        <span class="en">Tokelau</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/tuvalu/" data-bn-ipg="place-index-countrylist-551">图瓦卢
+                        <span class="en">Tuvalu</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/wallis-and-futuna/"
+                                        data-bn-ipg="place-index-countrylist-553">瓦利斯群岛和富图纳群岛 <span class="en">Wallis & Futuna</span></a>
+                    </li>
+
+
+                    <li class="item"><a href="//place.qyer.com/vanuatu/" data-bn-ipg="place-index-countrylist-554">瓦努阿图
+                        <span class="en">Vanuatu</span></a></li>
+
+
+                    <li class="item"><a href="//place.qyer.com/new-caledonia/"
+                                        data-bn-ipg="place-index-countrylist-563">新喀里多尼亚 <span
+                            class="en">New Caledonia</span></a></li>
+
+
+                    <li class="item"><p class="hot"><a href="//place.qyer.com/new-zealand/"
+                                                       data-bn-ipg="place-index-countrylist-241">新西兰 <span class="en">New Zealand</span></a>
+                    </p></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="coun clearfloat" id="coun7">
+            <h2 class="title clearfix">
+                <em><a href="javascript:void(0)">南极洲 Antarctica</a></em>
+                <span></span>
+            </h2>
+        </div>
+    </div>
+</div>
+<!--国家板块结束-->
+<!--空白快-->
+<div id="blank"></div>
+<!--底部栏-->
+<div id="foot">
+    <div id="topline"></div>
+    <div id="content">
+        <p class="nav">
+            <a href="" class="bold">穷游简介</a>
+            <a href="">合作伙伴</a>
+            <a href="">加入我们</a>
+            <a href="">新手上路</a>
+            <a href="">使用帮助</a>
+            <a href="">网站地图</a>
+            <a href="">会员条款</a>
+            <a href="">社区指南</a>
+            <a href="">版权声明</a>
+            <a href="">免责声明</a>
+        </p>
+        <p class="info">
+            2004-2017 © 穷游网® qyer.com All rights reserved. Version v5.57 京ICP备12003524号 京公网安备11010102001935号
+            京ICP证140673号
+            <a href="">营业执照</a>
+            <a href="">经营许可证</a>
+        </p>
+        <dl>
+            <dt>友情链接：</dt>
+            <dd><a href="">交通查询</a></dd>
+            <dd><a href="">余味全球美食</a></dd>
+            <dd><a href="">中国国家地理</a></dd>
+            <dd><a href="">台湾自由行</a></dd>
+            <dd><a href="">美国旅游</a></dd>
+            <dd><a href="">出境旅游</a></dd>
+            <dd><a href="">北京旅游网</a></dd>
+        </dl>
+    </div>
+</div>
+<!--意见反馈栏-->
+<div id="fk" style="display: block;right: -246px">
+    <div id="fkpic"></div>
+    <div id="fkcontent">
+        <h4>微信反馈更加方便</h4>
+        <div class="weixin">
+            <img src="image/placeFeedbackQR.jpg" alt="" width="76" height="76"/>
+            <p>
+                "扫码关注"<br>
+                <b>穷游手机助手</b>"微信号"<br>
+                "发文字，发语音，发图片"<br>
+                "随时随地提意见"
+            </p>
+        </div>
+        <h4>直接在站内反馈</h4>
+
+        <form>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="有任何意见或建议请告诉我们"></textarea>
+            <p>
+                使用遇到问题？请先进入<a href="">帮助中心</a>
+            </p>
+            <input type="button" id="btn" value="提交"/>
+        </form>
+
+    </div>
+</div>
+<!--置页顶-->
+<div id="top">回页顶</div>
+<script src="jquery-1.12.1.js"></script>
+<script src="common.js"></script>
+<script src="js/nav-header.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding:0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    min-width: 1160px;
+}
+.bx {
+    margin: 0 auto;
+    width: 960px;
+}
+.clearfloat:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfloat {
+    *zoom: 1
+}
+ul {
+    list-style: none;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+.hideBlock {
+    max-width: 700px;
+}
+input {
+    outline: none;
+}

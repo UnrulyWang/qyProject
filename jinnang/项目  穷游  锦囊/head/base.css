@@ -1,0 +1,53 @@
+/*body的最小宽度*/
+
+
+/*清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*左右浮动*/
+.fr {
+    float: right
+}
+
+.fl {
+    float: left
+}
+
+/*a标签样式*/
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*li*/
+li {
+    list-style: none;
+}
+
+i {
+    font-style: normal;
+}
+
+/*input样式*/
+input {
+    outline: none;
+    border: none;
+    background-color: #fff;
+}

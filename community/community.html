@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>出境游论坛_自助游论坛_旅游攻略论坛_穷游网论坛</title>
+        <meta name="keywords" content="出境游论坛，自助游论坛，旅游论坛，游记攻略，结伴同游，交易置换，旅行服务">
+        <meta name="description" content="欢迎来到穷游旅行社区！在这里，你可以和其他旅行者沟通交流，得到帮助或启发灵感，还可以发出自己的声音。在这里穷游er们彼此互助、相互激励，共同享受一段美好的旅途。">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="community.css">
+        <script src="common.js"></script>
+        <script src="jquery-1.12.1.js"></script>
+        <script>
+            // 页面加载
+            $(function(){
+                //头部社区下拉列表
+                //获取社区的li
+                var shequLi = $("#shequdw");
+                //获取社区的下拉列表的div
+                var sqSelecs = $("#shequ_selection");
+                // 注册社区li的鼠标进入离开事件
+                shequLi.mouseenter(function(){
+                    sqSelecs.show(300);
+                });
+               
+                sqSelecs.mouseenter(function(){
+                    $(this).show();
+                });
+                sqSelecs.mouseleave(function(){
+                    $(this).hide(300);
+                });
+    
+                // 社区下得下拉列表下的二级下拉列表注册事件
+                $("#lxlt-dropdown").mouseenter(function(){
+                    $(".lxlt-dropdown-cont").show(300);
+                });
+                
+                $(".lxlt-dropdown-cont").mouseenter(function(){
+                    $(this).parent().show();
+                });
+                $(".lxlt-dropdown-cont").mouseleave(function(){
+                    $(this).hide(300);
+                });
+                //注册社区下拉列表的每个li的鼠标进入离开事件
+                var sqUl=$("#sqselect");
+                $("#sqselect>li").mouseenter(function(){
+                    $(this).css("backgroundColor","#E3FAE0").siblings('li').css("backgroundColor","");
+                });
+                $("#sqselect>li").mouseleave(function(){
+                    $(this).css("backgroundColor","");
+                });
+
+                // 预订的下拉列表注册鼠标事件
+                $(".yuding").mouseenter(function(){
+                    $(".yd-list").show(300);
+                });
+                 $(".yd-list").mouseenter(function(){
+                    $(this).show();
+                 });
+                $(".yd-list").mouseleave(function(){
+                    $(this).hide(300);
+                });
+                $(".yd-list>li").mouseenter(function(){
+                    $(this).css("backgroundColor","#E3FAE0").siblings('li').css("backgroundColor","");
+                });
+                $(".yd-list>li").mouseleave(function(){
+                    $(this).css("backgroundColor","");
+                });
+
+                // 搜索输入框的鼠标事件
+                // 鼠标进入搜索符号图  显示搜索输入框
+                $(".search-img").mouseenter(function(){
+                    $(this)[0].src="community-imgs/search2.jpg";
+                    $(".search-img").css("border-radius",5);
+                    $(".search-txt").animate({"left":0},200);
+                });
+                $(".search-txt").click(function(){
+                    $(this).focus();
+                    $(this).show();
+                });
+                $(".search-txt").mouseleave(function(){
+                    if (!$(this).focus()) {
+                        $(this).animate({"left":"200px"},200).val("");
+                        $(".search-img")[0].src="community-imgs/search-r.jpg";
+                        $(".search-img").css("border-radius",0);
+                    };
+                });
+                $(".search-txt").blur(function(){
+                    $(this).animate({"left":"200px"},200).val("");
+                    $(".search-img")[0].src="community-imgs/search-r.jpg";
+                    $(".search-img").css("border-radius",0);
+                });
+                var h1 = window.innerHeight;
+                if (h1>180) {
+                    $("#bbs_returntop").css("top",(h1-172)*0.9);
+                };
+            });
+            window.onresize = function() {
+                //设置回顶部和底部的高度
+                var h1 = window.innerHeight;
+                if (h1>180) {
+                    $("#bbs_returntop").css("top",(h1-172)*0.9);
+                };
+            }
+        </script>
+    </head>
+    <body>
+    <div id = "community">
+    	<!-- 头部START -->
+    	<div id="layer_header">
+    		<a class="head_logo fl" href="../index/index.html"><img src="community-imgs/logo.png" height="18" width="58" alt="qiongyouLogo"></a>
+    		<div class="head_nav fl">
+    			<ul class="navul">
+    				<li class="nav_list"><a href="../place/place.html" class="nav_link">目的地</a></li>
+    				<li class="nav_list"><a href="../jinnang/项目%20%20穷游%20%20锦囊/jinNang.html" class="nav_link">锦囊</a></li>
+    				<li class="nav_list"><a href="#" class="nav_link">行程助手</a></li>
+    				<li class="nav_list dropdown shequ" id="shequdw"><a style="color:#429B59" href="#" class="nav_link">社区<i><span>◇</span></i></a>
+                        <div class="shequ_selection" id="shequ_selection">
+                            <span class="shangsanjiao"></span>
+                            <ul class="shequ_select" id="sqselect">
+                                <li class="sqselitem" id="lxlt-dropdown"><a href="#">旅行论坛</a><span class="leftarrow">&nbsp;&gt;</span></li>
+                                    
+                                    <div class="lxlt-dropdown-cont">
+                                        <div class="lxlt-dropdown-box"></div>
+                                        <div class="top">
+                                            <span class="fl">热门版块</span>
+                                            <span class="fr leftarrow"><a href="#">全部版块&nbsp;&gt;</a></span>
+                                        </div>
+                                        <dl class="clearfix">
+                                            <dt class="fl">兴趣小组</dt>
+                                            <dd class="fl">
+                                                <a href="#">结伴同游</a>
+                                                <a href="#">签证</a>
+                                                <a href="#">旅行摄影</a>
+                                                <a href="#">潜水俱乐部</a>
+                                                <a href="#">带孩子旅行</a>
+                                                <a href="#">明信片</a>
+                                                <a href="#">旅行购物</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class="fl">穷游欧洲</dt>
+                                            <dd class="fl">
+                                                <a href="#">法国/摩纳哥</a>
+                                                <a href="#">德国</a>
+                                                <a href="#">英国/爱尔兰</a>
+                                                <a href="#">瑞士/列支敦士登</a>
+                                                <a href="#">土耳其</a><br/>
+                                                <a href="#">挪威/瑞典/芬兰/丹麦/冰岛</a>
+                                                <a href="#">意大利/梵蒂冈/圣马力诺/马耳他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游亚洲</dt>
+                                            <dd class="fl">
+                                                <a href="#">台湾</a>
+                                                <a href="#">日本</a>
+                                                <a href="#">泰国</a>
+                                                <a href="#">新加坡</a>
+                                                <a href="#">斯里兰卡</a>
+                                                <a href="#">香港/澳门</a>
+                                                <a href="#">马来西亚/文莱</a><br/>
+                                                <a href="#">柬埔寨</a>
+                                                <a href="#">马尔代夫</a>
+                                                <a href="#">缅甸</a>
+                                                <a href="#">伊朗</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游美洲</dt>
+                                            <dd class='fl'>
+                                                <a href="#">加拿大</a>
+                                                <a href="#">美国</a>
+                                                <a href="#">中美</a>
+                                                <a href="#">南美/南极</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游大洋洲</dt>
+                                            <dd class='fl'>
+                                                <a href="#">澳大利亚</a>
+                                                <a href="#">新西兰</a>
+                                                <a href="#">太平洋海岛</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="clearfix">
+                                            <dt class='fl'>穷游非洲</dt>
+                                            <dd class='fl'>
+                                                <a href="#">东非地区</a>
+                                                <a href="#">非洲海岛</a>
+                                                <a href="#">北非地区</a>
+                                                <a href="#">非洲其他国家</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                <li class="sqselitem"><a href="#">旅行问答</a></li>
+                                <li class="sqselitem"><a href="#">JNE旅行生活美学</a></li>
+                                <li class="sqselitem"><a href="#">特别策划</a></li>
+                                <li class="sqselitem"><a href="#">负责任的旅行</a></li>
+                            </ul>
+                        </div>
+                    </li>
+    				<li class="nav_list nav_list_ad"><a href="../mall/mall.html" class="nav_link">商城<div class="nav_list_adimg"><img src="community-imgs/gif.gif" height="19" width="44" alt=""></div></a></li>
+    				<li class="nav_list"><a href="#" class="nav_link">机票</a></li>
+    				<li class="nav_list"><a href="#" class="nav_link">酒店</a></li>
+    				<li class="nav_list dropdown yuding"><a href="#" class="nav_link">预订<i><span>◇</span></i></a>
+                        <ul class="yd-list">
+                            <li><a href="#">特价酒店</a></li>
+                            <li><a href="#">爱彼迎</a></li>
+                            <li><a href="#">保险</a></li>
+                            <li><a href="#">华人旅馆</a></li>
+                            <li><a href="#">邮轮</a></li>
+                            <li><a href="#">租车</a></li>
+                        </ul>
+
+
+                    </li>
+    			</ul>
+    		</div>
+    		<div class="fun fr">
+    			<div class="nav_search fl">
+    				<input class="search-txt" type="text">
+                    <img class="search-img" src="community-imgs/search-r.jpg" alt="sear">
+    			</div>
+    			<div class="spacer fl"></div>
+				<div class="status fr">
+					<a href="#"><img class="login_in_qq" src="community-imgs/qq.jpg" height="14" width="13" alt=""></a>
+					<a href="#"><img class="login_in_weibo" src="community-imgs/weibo.jpg" height="14" width="17" alt=""></a>
+					<a href="#"><img class="login_in_weixin" src="community-imgs/weixin.jpg" height="14" width="17" alt=""></a>
+					<a href="#" class="register">注册</a>
+					<a href="#" class="login">登录</a>
+				</div>
+    		</div>
+    	</div>
+    	<!-- 头部END -->
+    	<!-- 轮播START -->
+    	<div id="crumnav">
+            <!-- 轮播图上部 -->
+    		<div class="cn_wrap">
+    			<div class="cn_ct">
+    			<!-- 左边部分 -->
+    				<div class="cn_fl fl">
+    					<h1 class="desctitle fl">穷游论坛</h1>
+    					<div class="descjj fl">
+    						<strong class="descfs">分享</strong>
+    						<i class="circle"></i>
+    						<strong>结伴</strong>
+    						<i class="circle"></i>
+    						<strong>找攻略</strong>
+    					</div>
+    				</div>
+    				<!-- 右边部分 -->
+    				<div class="cn_fr fr">
+    					<div class="cn_banlist fl" id="cn_banlist">
+    						<p>版面列表<i></i></p>
+                        </div>
+                        <div class="cn_pub fr">
+                            <img src="community-imgs/fatie.jpg" height="40" width="125" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 轮播图 -->
+            <div class="cns_wrap">
+                <div class="cns_slide">
+                    <a class="cover fl" href="#"><img id="cover_img" src="community-imgs/680x400(1).jpg" alt="背景1"></a>
+                    <div class="cns_so fl">
+                        <a class="userpic" href="#"><img id="user_img" src="community-imgs/200(1).jpg" height="80" width="80" alt="用户头像"></a>
+                        <p class="username"><a id="user_name" href="#">aero4400</a></p>
+                        <a class="usernote" id="user_note" href="#">【aero4400】品味英伦，从伦敦至爱丁堡的自驾</a>
+                    </div>
+                    <ul class="cn_sy" id="cnsy_ul">
+                        <li><a href="#"><img class="sy_current" src="community-imgs/680x400(1).jpg" width="50" height="50" alt=""></a><span class="shangsanjiao current"></span></li>
+                        <li><a href="#"><img src="community-imgs/680x400(2).jpg" width="50" height="50" alt=""></a><span class="shangsanjiao"></span></li>
+                        <li><a href="#"><img src="community-imgs/680x400(3).jpg" width="50" height="50" alt=""></a><span class="shangsanjiao"></span></li>
+                        <li><a href="#"><img src="community-imgs/680x400(4).jpg" width="50" height="50" alt=""></a><span class="shangsanjiao"></span></li>
+                        <li><a href="#"><img src="community-imgs/680x400(5).jpg" width="50" height="50" alt=""></a><span class="shangsanjiao"></span></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- 轮播图背景 -->
+            <div class="cnbg_wrap" id="cnbg_wrapid">
+                <img class="cnbg_current" src="community-imgs/indexbg(1).jpg" height="400" width="100%" alt="">
+                <img src="community-imgs/indexbg(2).jpg" height="400" width="100%" alt="">
+                <img src="community-imgs/indexbg(3).jpg" height="400" width="100%" alt="">
+                <img src="community-imgs/indexbg(4).jpg" height="400" width="100%" alt="">
+                <img src="community-imgs/indexbg(5).jpg" height="400" width="100%" alt="">
+            </div>
+            
+        </div>
+    	<!-- 轮播END -->
+
+        <!-- 内容列表部分START -->
+        <div id="container">
+            <div class="listcontent w clearfix">
+                <!-- 左边 -->
+                <div class="lc_fl fl">
+                    <div class="fl_tabs">
+                        <h3 class="flcell">游记攻略</h3>
+                        <h3 class="flcell">结伴同游</h3>
+                        <h3 class="flcell">版面列表</h3>
+                        <i class= "under_line active"></i>
+                    </div>
+                    <!-- <div></div> -->
+                    <div class="fl_content_box">
+                    <div class="fl_content active" id="fl_content">
+                        <div class="cont_cells" id="con_cells1">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(6).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close1">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(1).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells2">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(7).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close2">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(2).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells3">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(8).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close3">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(3).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells4">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(9).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close4">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(4).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells5">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(10).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close5">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(5).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells6">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(11).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close6">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(6).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells7">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(12).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close7">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(7).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells8">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(13).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close8">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(8).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells9">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(14).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close9">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(9).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(15).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <i class="con_close" id="con_close10">x</i>
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(10).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fl_content" id="fl_content2">
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(16).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(15).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(21).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(14).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(22).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(13).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(23).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(12).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(15).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(11).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(15).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(10).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(15).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(9).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fl_content" id="fl_content3">
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(15).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(10).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(14).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(12).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(13).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(8).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(8).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(2).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(7).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(7).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="cont_cells" id="con_cells10">
+                            <div class="yl_con">
+                                <i class="ylc_line"></i>
+                                <a href="#" class="author_pic"><img src="community-imgs/200(15).jpg" height="50" width="50" alt="userPic"></a>
+                                <dl class="con_detail fr">
+                                    <!-- <i class="con_close" id="con_close10">x</i> -->
+                                    <dt class="dl_title"><a href="#">旅行梦想家</a><img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></dt>
+                                    <dd class="dl_des clearfix">
+                                        <span class="fl">在<a class="dl_adress" href="#">日本</a>发布的游记<i class="praise"><i class="xnum">906</i>人赞</i></span>
+                                        <span class="con_time fl">最后回复与1小时前</span>                                        
+                                    </dd>
+                                    <dd class="dl_con">
+                                        <p><a class="tc_title" href="#">关西自由行最简单速成攻略，6天5晚走霓虹——玩转大阪、京都、奈良(附最实用且易懂的各种交通、旅游券、购物攻略)</a><i class="elite">精华</i></p>
+                                        <p class="tc_desc">请大家多多支持我的日本、台湾、泰国、韩国游记如果喜欢我的游记，请收藏并点一下喜欢哦，感谢感谢~日语盲二游霓虹之9天轻松玩转冲绳、关西...</p>
+                                        <a class="tc_rimg" href="#"><img src="community-imgs/161x107(2).jpg" height="107" width="161" alt=""></a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+                <!-- 右边 -->
+                <div class="lc_fr fr">
+                    <div class="regInfo">
+                        <div class="regTop">
+                            <p class="rt_des">
+                                加入穷游区<br>
+                                和80000000穷游er在一起<br>
+                                发现最世界
+                            </p>
+                            <a href="#" class="rt_reg" id="rt_reglink">注册穷游</a>
+                            <p class="rt_login">已有账号？立即<a class="rtl_lg" id="rtl_lglink" href="#">登录</a></p>
+                            <p class="rf_oth">
+                                <span>或通过第三方登录</span>
+                                <a class="other_login rt_sina" href="#"><img src="community-imgs/weibo2.jpg" height="19" width="22" alt=""></a>
+                                <a class="other_login rt_qq" href="#"><img src="community-imgs/qq2.jpg" height="19" width="22" alt=""></a>
+                                <a class="other_login rt_weixin" href="#"><img src="community-imgs/weixin2.jpg" height="19" width="22" alt=""></a>
+                            </p>
+
+                        </div>
+                        <div class="regBottom">
+                            <a class="rb_lo fl" href="#"></a>
+                            <div class="rb_co fl">
+                                <p>在手机上看帖</p>
+                                <p class="rb_an" id="rb_anlink">
+                                    <a href="#" id="inIphone">Iphone</a>
+                                    <span class="rb_line"></span>
+                                    <a href="#" id="inAndroid">Android</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lf_community">
+                        <p class="lfc_con">
+                            社区活动<a id="lfc_con_link" href="#">更多</a><i>&gt;&gt;</i>
+                        </p>
+                        <div class="lfc_content">
+                            <a href="#"><img src="community-imgs/270x125(1).jpg" height="125" width="270" alt="给照片加点料大赛"></a>
+                            <a href="#"><img src="community-imgs/270x125(2).jpg" height="125" width="270" alt="【游记征集】晒自驾游记为中国老司机代言 3000元现金等你拿"></a>
+                            <a href="#"><img src="community-imgs/270x125(3).jpg" height="125" width="270" alt="【游记大征集】寻找精华作者 赢大疆晓SPARK无人机等多重豪礼"></a>
+                        </div>
+                    </div>
+                    <div class="maybeInQyer">
+                        <p class="mi_cha">
+                            可能感兴趣的人<a class="mic_change" href="#">换一换</a>
+                        </p>
+                        <p class="mic_loading clearfix">
+                            <span class="micload_userpic fl"><img src="community-imgs/200(20).jpg" height="55" width="55" alt="userPic"></span>
+                            <span class="micload_relateuser fl">
+                                <span class="micload_username"><a href="#">万重山<img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></a><i class="joinguanzhu">+<s>关注</s></i></span>
+                                <span class="consult_user"><a href="#">问答探路者</a></span>
+                            </span>
+                        </p>
+                         <p class="mic_loading clearfix">
+                            <span class="micload_userpic fl"><img src="community-imgs/200(22).jpg" height="55" width="55" alt="userPic"></span>
+                            <span class="micload_relateuser fl">
+                                <span class="micload_username"><a href="#">小蜜蜜<img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></a><i class="joinguanzhu">+<s>关注</s></i></span>
+                                <span class="consult_user"><a href="#">问答探路者</a></span>
+                            </span>
+                        </p>
+                         <p class="mic_loading clearfix">
+                            <span class="micload_userpic fl"><img src="community-imgs/200(21).jpg" height="55" width="55" alt="userPic"></span>
+                            <span class="micload_relateuser fl">
+                                <span class="micload_username"><a href="#">花千骨<img src="community-imgs/at_member.png" height="16" width="16" alt="logo"></a><i class="joinguanzhu">+<s>关注</s></i></span>
+                                <span class="consult_user"><a href="#">问答探路者</a></span>
+                            </span>
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容列表部分END -->
+
+        <!-- 轮播图上部的版面列表下拉框 -->
+        <div class="cnb_cainner" id="cnb_cainner">
+            <div class="w clearfix">
+                <div class="cnb-cainner-box"></div>
+                <span class="cnb_shangsanjiao"></span>
+                <div class="cnbc_item cnbci_fir">
+                    <dl>
+                        <dt>穷游兴趣小组</dt>
+                        <dd class="xqxz_l"><a href="#">结伴同游</a></dd>
+                        <dd class="xqxz_r"><a href="#">旅行视频</a></dd>
+                        <dd class="xqxz_l"><a href="#">签证</a></dd>
+                        <dd class="xqxz_r"><a href="#">旅行摄影</a></dd>
+                        <dd class="xqxz_l"><a href="#">保险</a></dd>
+                        <dd class="xqxz_r"><a href="#">户外运动</a></dd>
+                        <dd class="xqxz_l"><a href="#">旅行购物</a></dd>
+                        <dd class="xqxz_r"><a href="#">潜水俱乐部</a></dd>
+                        <dd class="xqxz_l"><a href="#">穷游折扣</a></dd>
+                        <dd class="xqxz_r"><a href="#">带孩子旅行</a></dd>
+                        <dd class="xqxz_l"><a href="#">睡遍全球</a></dd>
+                        <dd class="xqxz_r"><a href="#">带父母旅行</a></dd>
+                        <dd class="xqxz_l"><a href="#">邮轮</a></dd>
+                        <dd class="xqxz_r"><a href="#">明信片</a></dd>
+                        <dd class="xqxz_l"><a href="#">航空</a></dd>
+                        <dd class="xqxz_r"><a href="#">路刻社</a></dd>
+                        <dd class="xqxz_l"><a href="#">自驾</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>线上线下</dt>
+                        <dd><a href="#">穷游活动</a></dd>
+                        <dd><a href="#">穷游er访谈</a></dd>
+                        <dd><a href="#">穷游沙龙</a></dd>
+                        <dd><a href="#">轻年计划</a></dd>
+                        <dd><a href="#">城市漫步</a></dd>
+                    </dl>
+                </div>
+                <div class="cnbc_item cnbci_sec">
+                    <dl>
+                        <dt>欧洲</dt>
+                        <dd class="ouzhou_l"><a href="#">环游欧洲</a></dd>
+                        <dd class="ouzhou_r"><a href="#">外高加索三国</a></dd>
+                        <dd class="ouzhou_l"><a href="#">法国/摩纳哥</a></dd>
+                        <dd class="ouzhou_r"><a href="#">土耳其</a></dd>
+                        <dd class="ouzhou_l"><a href="#">德国</a></dd>
+                        <dd class="ouzhou_r"><a href="#">东南欧地区</a></dd>
+                        <dd class="ouzhou_l"><a href="#">瑞士/列支敦士登</a></dd>
+                        <dd class="ouzhou_r"><a href="#">欧洲交通</a></dd>
+                        <dd><a href="#">奥地利</a></dd>
+                        <dd><a href="#">捷克/斯洛伐克/匈牙利</a></dd>
+                        <dd><a href="#">西班牙/葡萄牙/安道尔</a></dd>
+                        <dd><a href="#">希腊/塞浦路斯</a></dd>
+                        <dd><a href="#">意大利/梵蒂冈/圣马力诺/马耳他</a></dd>
+                        <dd><a href="#">英国/爱尔兰</a></dd>
+                        <dd><a href="#">荷兰/比利时/卢森堡</a></dd>
+                        <dd><a href="#">波兰/立陶宛/拉脱维亚/爱沙尼亚</a></dd>
+                        <dd><a href="#">挪威/瑞典/芬兰/丹麦/冰岛</a></dd>
+                        <dd><a href="#">俄罗斯/乌克兰/白俄罗斯</a></dd>
+                    </dl>
+                </div>
+                <div class="cnbc_item cnbci_th">
+                    <dl>
+                        <dt>亚洲</dt>
+                        <dd class="yazhou_l"><a href="#">环游亚洲</a></dd>
+                        <dd class="yazhou_r"><a href="#">不丹</a></dd>
+                        <dd class="yazhou_l"><a href="#">日本</a></dd>
+                        <dd class="yazhou_r"><a href="#">印度尼西亚/东帝汶</a></dd>
+                        <dd class="yazhou_l"><a href="#">韩国/朝鲜</a></dd>
+                        <dd class="yazhou_r"><a href="#">马尔代夫</a></dd>
+                        <dd class="yazhou_l"><a href="#">台湾</a></dd>
+                        <dd class="yazhou_r"><a href="#">斯里兰卡</a></dd>
+                        <dd class="yazhou_l"><a href="#">香港/澳门</a></dd>
+                        <dd class="yazhou_r"><a href="#">印度/孟加拉</a></dd>
+                        <dd class="yazhou_l"><a href="#">泰国</a></dd>
+                        <dd class="yazhou_r"><a href="#">伊朗</a></dd>
+                        <dd class="yazhou_l"><a href="#">马来西亚/文莱</a></dd>
+                        <dd class="yazhou_r"><a href="#">巴基斯坦/阿富汗</a></dd>
+                        <dd class="yazhou_l"><a href="#">新加坡</a></dd>
+                        <dd class="yazhou_r"><a href="#">阿联酋/卡塔尔</a></dd>
+                        <dd class="yazhou_l"><a href="#">菲律宾</a></dd>
+                        <dd class="yazhou_r"><a href="#">以色列</a></dd>
+                        <dd class="yazhou_l"><a href="#">柬埔寨</a></dd>
+                        <dd class="yazhou_r"><a href="#">西亚其他国家</a></dd>
+                        <dd class="yazhou_l"><a href="#">越南</a></dd>
+                        <dd class="yazhou_r"><a href="#">中亚各国</a></dd>
+                        <dd class="yazhou_l"><a href="#">老挝</a></dd>
+                        <dd class="yazhou_r"><a href="#">蒙古</a></dd>
+                        <dd class="yazhou_l"><a href="#">缅甸</a></dd>
+                        <dd class="yazhou_r"><a href="#">中国内地</a></dd>
+                        <dd class="yazhou_l"><a href="#">尼泊尔</a></dd>
+                    </dl>
+                </div>
+                <div class="cnbc_item cnbci_fo">
+                    <div class="fl" style="width:100px;">
+                        <dl>
+                            <dt>美洲</dt>
+                            <dd><a href="#">美国</a></dd>
+                            <dd><a href="#">加拿大</a></dd>
+                            <dd><a href="#">中美</a></dd>
+                            <dd><a href="#">南美/南极</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>大洋洲</dt>
+                            <dd><a href="#">澳大利亚</a></dd>
+                            <dd><a href="#">新西兰</a></dd>
+                            <dd><a href="#">太平洋海岛</a></dd>
+                        </dl>
+                    </div>
+                    <div class="fl" style="width:100px;">
+                        <dl>
+                            <dt>非洲</dt>
+                            <dd><a href="#">北非地区</a></dd>
+                            <dd><a href="#">东非地区</a></dd>
+                            <dd><a href="#">非洲海岛</a></dd>
+                            <dd><a href="#">非洲其他国家</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>后院</dt>
+                            <dd><a href="#">建议反馈</a></dd>
+                            <dd><a href="#">海阔天空</a></dd>
+                            <dd><a href="#">转让专区</a></dd>
+                        </dl>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <!-- 意见反馈 -->
+        <div class="qui_feedback">
+           <a class="js-btn fl" href="#"><img src="community-imgs/feedback.jpg" height="149" width="24" alt="feedback"></a>
+           <div class="fs-cont fl">
+              <form method="post">
+                  <textarea class="js-feedback-cnt" cols="50" rows="10" placeholder="有任何意见或建议告诉我们"></textarea>
+                  <p class="help">使用遇到问题？请先进入<a href="#">帮助中心</a></p>
+                  <input type="button" value="提交" class="js-submitbtn">
+              </form> 
+           </div>
+        </div>
+
+        <!-- 返回顶部、底部 -->
+        <div class="bbs_returntop" id="bbs_returntop">
+            <div class="up_arrow"></div>
+            <div class="ewm"><img src="community-imgs/xiaoerweima.jpg" height="76" width="46" alt="erweima">
+                <div class="bigerweima"><img src="community-imgs/erweima.png" height="100" width="100" alt="weixin">
+                </div>
+            </div>
+            <div class="down_arrow"></div>
+        </div>
+
+
+        <!-- 底部START -->
+        <div id="footer">
+            <div class="w">
+                <ul class="foot_nav clearfix">
+                    <li><a class="lifirst_child" href="#">穷游简介</a></li>
+                    <li><a href="#">合作伙伴</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">新手上路</a></li>
+                    <li><a href="#">使用帮助</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">会员条款</a></li>
+                    <li><a href="#">社区指南</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <!-- 友情链接 -->
+                <p class="friendlink">
+                    2004-2017&nbsp;©&nbsp;穷游网®&nbsp;qyer.com&nbsp;All&nbsp;rights&nbsp;eserved.&nbsp;Version&nbsp;v5.57&nbsp;京ICP备12003524号&nbsp;京公网安备11010102001935号&nbsp;京ICP证140673号&nbsp;<a class="frlk" href="#">营业执照</a>&nbsp;<a class="frlk" href="#">经营许可证</a>
+                </p>
+            </div>
+        </div>
+        <!-- 底部END -->
+    </div>
+    <script src="community.js"></script>
+    </body>
+</html>

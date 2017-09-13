@@ -1,0 +1,53 @@
+/*≥ı ºªØ*/
+body {margin:0; padding:0; font:12px/1.5 "Œ¢»Ì—≈∫⁄",\5b8b\4f53,Arial,sans-serif; color: #3b3b3b;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none!important;portant;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration:underline;}
+a:active {color:#ba2636;}
+.w{
+    width: 1160px;
+    margin: 0 auto;
+}
+body{
+    max-width: 1349px;
+    font-family: "Œ¢»È—≈∫⁄";
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+html{
+    min-width: 500px;
+}
+.header .hide .tips:before{
+    content:"";
+    display: inline-block;
+    width: 108px;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background: url(../images/head_ydnav3.png) no-repeat;
+}
+.header .hm .icon:before{
+    content:"";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/headfoot.png) no-repeat;
+}
+a:hover{
+    color: #f40 !important;
+}

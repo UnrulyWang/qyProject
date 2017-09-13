@@ -1,0 +1,519 @@
+body{
+    background-color: #66677c;
+}
+#big {
+    background: url("../image/bg.gif") no-repeat;
+    min-width: 980px;
+    width: 100%;
+    height: 400px;
+    margin: 0px auto 158px;
+    padding-top: 100px;
+    position: relative;
+}
+/*大图里面的文本*/
+#big .text{
+    font-size:48px;
+    width: 100%;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+}
+/*大图中间框*/
+#big .sousuo{
+    width: 600px;
+    margin: 20px auto 0;
+    /*height: 200px;*/
+    padding: 20px;
+    background-color: rgba(0,0,0,.6);
+}
+#big .sousuo #srk #txt {
+    width: 536px;
+    height: 30px;
+    padding: 10px 44px 10px 20px;
+    background:#fff url("../image/ind_sch.png") no-repeat 562px;
+    font-size: 20px;
+    line-height: 30px;
+}
+#big .sousuo .city{
+    color: whitesmoke;
+    line-height: 30px;
+}
+#big .sousuo .city a{
+    margin-right: 19px;
+    color: whitesmoke;
+}
+#big .box{
+    position: absolute;
+    width: 980px;
+    margin: 0 auto;
+    bottom: 24px;
+    left: 250px;
+
+}
+#big .box #box{
+    position: absolute;
+    min-width: 26px;
+    height: 26px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    float: right;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+
+}
+#big .box #box #p1{
+    width: 26px;
+    height: 26px;
+    background: url("../image/ind_info.png") no-repeat 50%;
+}
+#big .box #box #p2{
+    height: 26px;
+    display: none;
+    overflow: hidden;
+    color: white;
+}
+#big .box #box #p2 a {
+    color: white;
+}
+
+/*8**************************************************************************/
+/*探索世界*/
+#explore{
+    width: 980px;
+    margin: 0 auto 58px;
+}
+#explore #ex-nav{
+   position: relative;
+    margin-bottom: 20px;
+}
+#explore #ex-nav h2{
+    font-size:24px;
+    line-height: 26px;
+}
+#explore #ex-nav ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#explore #ex-nav ul li{
+    float: left;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+}
+#explore #ex-nav ul li a{
+  display: block;
+    border-radius: 3px;
+    cursor: default;
+    padding: 0 8px;
+}
+.nowrent{
+    background: #65b17f;
+    color: #fff;
+}
+
+/************************/
+/*写图片墙*/
+/*图片的大盒子*/
+#explore .worldPicture {
+    position: relative;
+    width: 100%;
+    height: 610px;
+    overflow: hidden;
+}
+#explore .worldPicture ul{
+    position: absolute;
+    top:0;
+    height: 610px;
+    width:980px;
+    cursor: pointer;
+    /*background-color: rgba(0,0,0,.6);*/
+}
+#explore .worldPicture ul li{
+    position: absolute;
+        float: left;
+    overflow: hidden;
+    display: block;
+
+
+}
+#explore .worldPicture em {
+    font-style: normal;
+}
+#explore .worldPicture a{
+    display: block;
+    transition: all 0.8s;
+}
+#explore .worldPicture img{
+    display: block;
+}
+#explore .worldPicture a:hover{
+    transform: scale(1.07);
+}
+/*图片的位置布局********************************************/
+#explore .worldPicture .pic1{
+    left: 0;
+    top:0;
+}
+#explore .worldPicture .pic2{
+    left: 394px;
+    top:0;
+}
+
+#explore .worldPicture .pic3{
+     left: 591px;
+     top:0;
+ }
+#explore .worldPicture .pic4{
+      left: 788px;
+      top:0;
+  }
+#explore .worldPicture .pic5{
+       left: 0px;
+       top:205px;
+   }
+#explore .worldPicture .pic6{
+         left: 197px;
+         top:205px;
+     }
+#explore .worldPicture .pic7{
+    left: 788px;
+    top:205px;
+}
+#explore .worldPicture .pic8{
+    left: 197px;
+    top:410px;
+}
+#explore .worldPicture .pic9{
+    left: 394px;
+    top:410px;
+}
+#explore .worldPicture .pic10{
+    left: 591px;
+    top:410px;
+}
+/***************图片布局结束******************/
+#explore .worldPicture .title span{
+    display: block;
+    padding: 0 10px;
+}
+#explore .worldPicture .title{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 50px;
+    background: url("../image/pic_titbg.png") repeat-x;
+    font-size: 30px;
+    line-height: 50px;
+    color: #fff;
+    font-family:  hiragino sans gb,Microsoft YaHei,\9ED1\4F53,\5b8b\4f53,sans-serif;
+}
+/*图片当中遮挡层的样式*/
+#explore .worldPicture .mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    font-size: 0;
+    overflow: hidden;
+    z-index: 199;
+}
+#explore .worldPicture .mask .mask-p{
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    color: #fff;
+}
+#explore .worldPicture .mask .mask-p em{
+    display: block;
+    font-size: 30px;
+    line-height: 50px;
+    padding:10px 10px 0;
+    font-family:  hiragino sans gb,Microsoft YaHei,\9ED1\4F53,\5b8b\4f53,sans-serif;
+}
+#explore .worldPicture .mask .mask-p .mask-text{
+    display: block;
+    font-size: 14px;
+    padding: 0 10px 10px;
+}
+/******图片层每个ul的样式********/
+#explore .worldPicture #worldPic1,#worldPic2,#worldPic3,#worldPic4,#worldPic5,#worldPic6,#worldPic7{
+     left:980px;
+ }
+
+/******************************************************************************************************************/
+/*******国家名字开始********/
+#country{
+    width: 980px;
+    margin: 0 auto 58px;
+}
+#country #coun-nav{
+    position: relative;
+    margin-bottom: 20px;
+}
+#country #coun-nav h2{
+    font-size: 24px;
+    line-height: 26px;
+}
+#country #coun-nav #u2{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#country #coun-nav #u2 li{
+
+    float: left;
+    margin-left: 14px;
+    /*padding: 0 8px 4px;*/
+    font-size:14px;
+    line-height: 30px;
+    font-weight: 700;
+}
+#country #coun-nav #u2 li a{
+    /*display: block;*/
+    padding: 4px 8px 4px;
+    border-radius: 3px;
+}
+/*******************************国家框架*/
+#country #coun-list {
+    width: 980px;
+    display: block;
+}
+#country #coun-list .coun{
+    position: relative;
+    opacity: 1;
+    left: 0;
+    /*display: block;*/
+}
+/***********************************国家板块的第一个州名部分*/
+#country #coun-list .coun .title{
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+#country #coun-list .coun .title em{
+    font-size: 18px;
+    float: left;
+    line-height: 20px;
+    font-style: normal;
+}
+#country #coun-list .coun .title a{
+    color: #07e293;
+}
+#country #coun-list .coun .title span{
+    float: left;
+    margin-left: 6px;
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #959595;
+}
+/*******************888888888888888*/
+/*国家版快的line1*/
+#country #coun-list .coun .line1{
+    float: left;
+    width: 310px;
+    margin-right: 25px;
+}
+#country #coun-list .coun .line2{
+    float: left;
+    width: 310px;
+    margin-right: 25px;
+}
+#country #coun-list .coun .line3{
+    float: left;
+    width: 310px;
+}
+/*ul的央视*/
+#country #coun-list .coun ul{
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 24px;
+}
+/*所有li的样式*/
+#country #coun-list .coun .item{
+    height: 24px;
+    overflow: hidden;
+}
+/*hot小图标*/
+#country #coun-list .coun .hot{
+    float: left;
+    padding-right: 33px;
+    background: url("../image/icon_hot.png") no-repeat 100%;
+}
+/*所有a的样式*/
+#country #coun-list .coun  a{
+    max-width: 100%;
+    overflow: hidden;
+    color:#0d0c0d;
+    font-weight: bold;
+    /*color: #FFFFFF;*/
+    text-overflow: ellipsis;
+}
+#country #coun-list .coun  .en{
+    color:  #959595;
+}
+/*************************************************************************************/
+/*空白快颜色规划i*/
+#blank{
+    position: relative;
+    z-index: 1111;
+    margin: 0 auto 20px;
+    width: 980px;
+    height: 110px;
+}
+/********底部************/
+#foot{
+    background: #323232;
+    padding-bottom: 25px;
+    /*width: 980px;*/
+    /*margin: 0 auto;*/
+
+}
+#foot #topline{
+    height: 3px;
+    background-color: #007345;
+}
+#foot #content{
+    width: 980px;
+    margin: 0 auto;
+}
+/*************底部导航栏*****************/
+#foot .nav{
+    display: block;
+    margin-top: 36px;
+    margin-left: 6px;
+}
+#foot .nav .bold{
+    border-left: 3px solid #25a851;
+    padding-left: 15px;
+    text-align: center;
+}
+#foot .nav a{
+    border-left: 2px solid #636363;
+    padding-left: 10px;
+    margin-right: 10px;
+    color: silver;
+    font-size: 14px;
+}
+/*************************************************************/
+/*****************底部信息*************************/
+#foot .info{
+    font-size: 12px;
+    color: #636363;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+#foot .info a{
+    font-size: 12px;
+    color: #636363;
+}
+#foot dl{
+    font-size: 20px;
+    line-height: 25px;
+    color: #636363;
+    margin-bottom: 20px;
+}
+#foot dl a {
+    color: #636363;
+}
+#foot dl dt{
+    float: left;
+}
+#foot dl dd{
+   line-height: 16px;
+    margin-top: 6px;
+    border-right: 2px solid #636363;
+    padding:0 5px;
+    font-size: 14px;
+    float: left;
+}
+/******************************************/
+#fk{
+    position:fixed;
+    top: 160px;
+    z-index: 99;
+}
+#fk #fkpic {
+    float: left;
+    width: 24px;
+    height: 150px;
+    background: url("../image/icons_feedback.png") 0 0 no-repeat;
+}
+#fk #fkcontent {
+    background-color: #f6f6f6;
+    float: left;
+    /*height: 150px;*/
+    width: 246px;
+}
+#fk h4{
+    padding: 0px 10px 0px;
+    margin-bottom:5px;
+}
+#fk #fkcontent .weixin {
+   position: relative;
+    height: 76px;
+    padding: 0 10px 0;
+    margin-bottom: 6px;
+}
+#fk #fkcontent .weixin img{
+    position: absolute;
+    left: 0;
+    margin-right: 10px;
+}
+#fk #fkcontent .weixin p{
+    position: absolute;
+    right: 0px;
+    font-size: 14px;
+}
+#fk form{
+    padding: 0 10px 10px;
+}
+#fk form textarea{
+    width: 214px;
+    padding: 192px;
+    padding:5px 2px 5px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+#fk form p{
+    position: relative;
+    top:-2px;
+    font-size: 14px;
+    height: 20px;
+    text-align: center;
+    background-color: #fefdc9;
+}
+#fk form p a{
+    color: blue;font-weight: bold;
+}
+#fk form #btn{
+    float: right;
+    margin: 10px 0;
+    border-radius: 3px;
+    background-color: #10b041;
+    width: 40px;
+    height: 25px;
+}
+
+#top{
+    display:none;
+    width: 60px;
+    z-index: 100;
+    border: 1px solid #ccc;
+    position: fixed;
+    bottom:80px;
+    height: 25px;
+    padding-top: 53px;
+    background: url("../image/icon_gotop.png") no-repeat center 16px #fff;
+    right: 50px;
+    color: #959595;
+    text-align: center;
+
+}
